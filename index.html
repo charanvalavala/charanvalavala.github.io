@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#101815">
+    <meta
+      name="description"
+      content="Applied AI engineering projects by Charan Teja Valavala: retrieval, research agents, document QA, and coding-agent workflows."
+    >
+    <meta
+      property="og:title"
+      content="Charan Teja Valavala — Applied AI Engineer"
+    >
+    <meta
+      property="og:description"
+      content="Useful AI, measured through retrieval, research agents, document QA, and coding-agent workflows."
+    >
+    <meta property="og:type" content="website">
+    <title>Charan Teja Valavala — Applied AI Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#top">Skip to content</a>
+    <header class="topbar">
+      <a class="wordmark" href="#top" aria-label="Charan Teja Valavala home"
+        >CTV<span>.</span></a
+      >
+      <nav aria-label="Main navigation">
+        <a href="#work">Selected work</a>
+        <a href="#approach">Approach</a>
+        <a
+          href="https://github.com/charanvalavala"
+          class="nav-cta"
+          target="_blank"
+          rel="noopener noreferrer"
+          >GitHub <span aria-hidden="true">↗</span></a
+        >
+      </nav>
+    </header>
+
+    <main id="top" tabindex="-1">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="status-dot"></span>
+            Applied AI · Hyderabad, India
+          </p>
+          <h1>Useful AI.<br><em>Measured,</em> not imagined.</h1>
+          <p class="intro">
+            I’m Charan Teja Valavala, a BITS Pilani Hyderabad student building
+            AI systems that retrieve evidence, use tools, and make their limits
+            visible.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#work"
+              >Explore the work <span aria-hidden="true">↓</span></a
+            >
+            <a class="text-link" href="#approach"
+              >How I build <span aria-hidden="true">↓</span></a
+            >
+          </div>
+        </div>
+        <div
+          class="hero-art"
+          role="img"
+          aria-label="A map connecting retrieval, agents, evaluation, and product engineering"
+        >
+          <div class="orbit orbit-one" aria-hidden="true"></div>
+          <div class="orbit orbit-two" aria-hidden="true"></div>
+          <div class="core" aria-hidden="true">
+            <span>AI</span><small>ENGINEERING</small>
+          </div>
+          <div class="node node-retrieval" aria-hidden="true">
+            <i>01</i><span>Retrieval</span>
+          </div>
+          <div class="node node-agents" aria-hidden="true">
+            <i>02</i><span>Agents</span>
+          </div>
+          <div class="node node-eval" aria-hidden="true">
+            <i>03</i><span>Evaluation</span>
+          </div>
+          <div class="node node-product" aria-hidden="true">
+            <i>04</i><span>Product</span>
+          </div>
+          <div class="orbit-label" aria-hidden="true">
+            SYSTEMS THAT SHOW THEIR WORK
+          </div>
+        </div>
+        <div class="scroll-cue"><span></span> Scroll to explore</div>
+      </section>
+
+      <section class="work-section" id="work">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Selected engineering work</p>
+            <h2>Four problems.<br><em>Four different systems.</em></h2>
+          </div>
+          <p class="section-note">
+            Four independent builds across retrieval, research tooling,
+            evaluation, and workflow design. Each card links to the code and
+            states what its measurements do and do not show.
+          </p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card project-campus">
+            <div class="card-top">
+              <span class="project-index">01 / SEARCH PRODUCT</span
+              ><span class="project-icon">↗</span>
+            </div>
+            <div class="card-visual campus-visual">
+              <div class="doc-sheet">
+                <span class="doc-line wide"></span><span class="doc-line"></span
+                ><span class="doc-line medium"></span>
+                <div class="source-pill">OFFICIAL SOURCE <b>↗</b></div>
+              </div>
+              <div class="answer-bubble">Grounded answer <span>01</span></div>
+              <div class="connector"></div>
+            </div>
+            <p class="project-type">LOCAL BM25 · BITS HYDERABAD</p>
+            <h3>Campus Evidence Finder</h3>
+            <p class="project-description">
+              A browser-only search app over four official campus sources, with
+              freshness-aware ranking, linked evidence, and guardrails around
+              cohort-specific scholarship claims.
+            </p>
+            <div class="tag-row">
+              <span>BM25</span><span>Source citations</span
+              ><span>Hit@3 / MRR@3</span>
+            </div>
+            <div class="card-footer">
+              <span>9 labels · Hit@3 1.00 · MRR@3 1.000</span
+              ><div class="card-links"><a
+                href="https://charanvalavala.github.io/campus-evidence-assistant/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Demo ↗</a
+              ><a
+                href="https://github.com/charanvalavala/campus-evidence-assistant"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Code ↗</a></div>
+            </div>
+          </article>
+
+          <article class="project-card project-research">
+            <div class="card-top">
+              <span class="project-index">02 / RESEARCH AGENT</span
+              ><span class="project-icon">⌘</span>
+            </div>
+            <div
+              class="card-visual research-visual"
+              role="img"
+              aria-label="Illustrative search interface; these are not live arXiv results"
+            >
+              <div class="research-query">
+                tool-using agents <span>ILLUSTRATION</span>
+              </div>
+              <div class="paper paper-a">
+                <b>01</b><span>Agent evaluation methods</span
+                ><i>sample card · not a live result</i>
+              </div>
+              <div class="paper paper-b">
+                <b>02</b><span>Tools and reasoning</span
+                ><i>sample card · not a live result</i>
+              </div>
+              <div class="paper paper-c">
+                <b>03</b><span>Benchmark design</span
+                ><i>sample card · not a live result</i>
+              </div>
+            </div>
+            <p class="project-type">PYTHON TOOL · AGENT EXTENSION</p>
+            <h3>arXiv Research Agent</h3>
+            <p class="project-description">
+              A bounded arXiv search tool that returns abstracts, author/date
+              metadata, canonical links, and structured provenance for an
+              agent workflow.
+            </p>
+            <div class="tag-row">
+              <span>Tool use</span><span>Failure handling</span
+              ><span>Provenance</span>
+            </div>
+            <div class="card-footer">
+              <span>5-result cap · 12 s timeout · 4 tests</span
+              ><a
+                href="https://github.com/charanvalavala/arxiv-research-agent"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Code ↗</a
+              >
+            </div>
+          </article>
+
+          <article class="project-card project-docs">
+            <div class="card-top">
+              <span class="project-index">03 / RETRIEVAL EVALUATION</span
+              ><span class="project-icon">▤</span>
+            </div>
+            <div class="card-visual docs-visual">
+              <div class="manual-page">
+                <div class="manual-head">
+                  Raspberry Pi 5 <small>PRODUCT BRIEF</small>
+                </div>
+                <div class="spec-row">
+                  <span>CPU</span><b>2.4 GHz</b><i>01</i>
+                </div>
+                <div class="spec-row">
+                  <span>DISPLAY</span><b>Dual 4Kp60</b><i>02</i>
+                </div>
+                <div class="spec-row">
+                  <span>INTERFACE</span><b>PCIe 2.0 x1</b><i>03</i>
+                </div>
+              </div>
+              <div class="metric-stamp">TOP 5<br><small>EVIDENCE</small></div>
+            </div>
+            <p class="project-type">GO CLI · RETRIEVAL EVALUATION</p>
+            <h3>RAGFlow Retrieval Evaluator</h3>
+            <p class="project-description">
+              Evaluates retrieved chunks against manually labeled evidence
+              anchors for a public hardware brief. The benchmark measures
+              retrieval, not answer truth.
+            </p>
+            <div class="tag-row">
+              <span>Retrieval API</span><span>Evidence anchors</span
+              ><span>Hit@5 / MRR@5</span>
+            </div>
+            <div class="card-footer">
+              <span>6 evidence cases · corpus required</span
+              ><a
+                href="https://github.com/charanvalavala/ragflow-retrieval-evaluator"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Code ↗</a
+              >
+            </div>
+          </article>
+
+          <article class="project-card project-code">
+            <div class="card-top">
+              <span class="project-index">04 / ENGINEERING WORKFLOW</span
+              ><span class="project-icon">{ }</span>
+            </div>
+            <div class="card-visual code-visual">
+              <div class="code-window">
+                <div class="window-bar">
+                  <i></i><i></i><i></i><span>engineering brief.md</span>
+                </div>
+                <div class="code-lines">
+                  <span><b>01</b> inspect(repository)</span
+                  ><span><b>02</b> implement(high_impact_change)</span
+                  ><span><b>03</b> measure(reproducibly)</span
+                  ><span><b>04</b> document(tradeoffs)</span
+                  ><span><b>05</b> report(actual_results)</span>
+                </div>
+              </div>
+              <div class="run-state">
+                <span class="status-dot"></span>
+                EDITABLE TASK PROMPT
+              </div>
+            </div>
+            <p class="project-type">LOCAL WEB TOOL · TASK DESIGN</p>
+            <h3>AI Engineering Brief Builder</h3>
+            <p class="project-description">
+              Turns a rough engineering request into a structured handoff with
+              observable criteria, verification steps, and a Markdown export.
+              Brief content stays in the browser.
+            </p>
+            <div class="tag-row">
+              <span>Vanilla JavaScript</span><span>Task UX</span
+              ><span>Local-first</span>
+            </div>
+            <div class="card-footer">
+              <span>3 tests · copy + Markdown export</span
+              ><div class="card-links"><a
+                href="https://charanvalavala.github.io/ai-engineering-brief-builder/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Demo ↗</a
+              ><a
+                href="https://github.com/charanvalavala/ai-engineering-brief-builder"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Code ↗</a></div>
+            </div>
+          </article>
+        </div>
+        <p class="portfolio-note">
+          <span>↳</span>
+          Metrics are scoped to each README’s labeled set; the retrieval
+          evaluator needs a configured RAGFlow corpus for a live score.
+        </p>
+      </section>
+
+      <section class="approach-section" id="approach">
+        <div class="approach-head">
+          <p class="eyebrow">How I build</p>
+          <h2>Engineering is<br><em>the whole loop.</em></h2>
+        </div>
+        <div class="approach-steps">
+          <div class="approach-step">
+            <span>01</span>
+            <div>
+              <h3>Start with evidence</h3>
+              <p>
+                Use primary sources and real user needs. Keep the corpus,
+                assumptions, and data boundaries visible.
+              </p>
+            </div>
+          </div>
+          <div class="approach-step">
+            <span>02</span>
+            <div>
+              <h3>Make it measurable</h3>
+              <p>
+                Define a small labeled set and a clear metric before tuning
+                retrieval, prompts, or agent behavior.
+              </p>
+            </div>
+          </div>
+          <div class="approach-step">
+            <span>03</span>
+            <div>
+              <h3>Ship the workflow</h3>
+              <p>
+                Connect the model to a product surface, handle failure states,
+                and make the result easy to run again.
+              </p>
+            </div>
+          </div>
+          <div class="approach-step">
+            <span>04</span>
+            <div>
+              <h3>Report what happened</h3>
+              <p>
+                Share actual measurements, trade-offs, and gaps. Never turn a
+                benchmark plan into a result.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact">
+        <p class="eyebrow">Building toward applied AI engineering</p>
+        <h2>Build the evidence.<br><em>Then make the claim.</em></h2>
+        <p class="contact-copy">
+          Open the projects, inspect the changes, and see what each evaluation
+          actually measures.
+        </p>
+        <a
+          class="button button-primary"
+          href="https://github.com/charanvalavala"
+          target="_blank"
+          rel="noopener noreferrer"
+          >View my GitHub profile <span aria-hidden="true">↗</span></a
+        >
+      </section>
+    </main>
+    <footer>
+      <span>© 2026 Charan Teja Valavala</span
+      ><span>Applied AI · BITS Pilani, Hyderabad Campus</span
+      ><a
+        href="https://github.com/charanvalavala"
+        target="_blank"
+        rel="noopener noreferrer"
+        >GitHub ↗</a
+      >
+    </footer>
+  </body>
+</html>
