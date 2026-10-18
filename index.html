@@ -3,375 +3,207 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#101815">
+    <meta name="theme-color" content="#f4f5ef">
     <meta
       name="description"
-      content="Applied AI engineering projects by Charan Teja Valavala: retrieval, research agents, document QA, and coding-agent workflows."
+      content="Charan Teja Valavala is a computer science student building evidence-grounded AI products, retrieval systems, and practical software."
     >
-    <meta
-      property="og:title"
-      content="Charan Teja Valavala — Applied AI Engineer"
-    >
+    <meta property="og:title" content="Charan Teja Valavala — Applied AI Engineering">
     <meta
       property="og:description"
-      content="Useful AI, measured through retrieval, research agents, document QA, and coding-agent workflows."
+      content="A portfolio of applied AI projects in document retrieval, financial filings, and incident workflows."
     >
     <meta property="og:type" content="website">
-    <title>Charan Teja Valavala — Applied AI Engineer</title>
+    <title>Charan Teja Valavala — Applied AI Engineering</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap"
       rel="stylesheet"
     >
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
   </head>
   <body>
-    <a class="skip-link" href="#top">Skip to content</a>
-    <header class="topbar">
-      <a class="wordmark" href="#top" aria-label="Charan Teja Valavala home"
-        >CTV<span>.</span></a
-      >
-      <nav aria-label="Main navigation">
-        <a href="#work">Selected work</a>
-        <a href="#approach">Approach</a>
-        <a
-          href="https://github.com/charanvalavala"
-          class="nav-cta"
-          target="_blank"
-          rel="noopener noreferrer"
-          >GitHub <span aria-hidden="true">↗</span></a
-        >
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Charan Teja Valavala home">
+        <span class="brand-mark" aria-hidden="true">C</span>
+        <span>Charan Teja Valavala</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a class="nav-link" href="https://github.com/charanvalavala" target="_blank" rel="noopener noreferrer">
+          GitHub <span aria-hidden="true">↗</span>
+        </a>
       </nav>
     </header>
 
-    <main id="top" tabindex="-1">
-      <section class="hero">
-        <div class="hero-copy">
-          <p class="eyebrow">
-            <span class="status-dot"></span>
-            Applied AI · Hyderabad, India
-          </p>
-          <h1>Useful AI.<br><em>Measured,</em> not imagined.</h1>
-          <p class="intro">
-            I’m Charan Teja Valavala, a BITS Pilani Hyderabad student building
-            AI systems that retrieve evidence, use tools, and make their limits
-            visible.
+    <main id="main" tabindex="-1">
+      <section class="hero section-shell" id="top" aria-labelledby="hero-title">
+        <div class="hero-copy" data-reveal>
+          <p class="eyebrow"><span class="eyebrow-line"></span>Applied AI · Hyderabad, India</p>
+          <h1 id="hero-title">AI that<br>shows its <span>work.</span></h1>
+          <p class="hero-summary">
+            I’m Charan Teja, a computer science student at BITS Pilani, Hyderabad Campus. I build practical AI systems that surface their evidence, handle uncertainty, and make evaluation part of the product.
           </p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#work"
-              >Explore the work <span aria-hidden="true">↓</span></a
-            >
-            <a class="text-link" href="#approach"
-              >How I build <span aria-hidden="true">↓</span></a
-            >
+            <a class="button button-primary" href="#work">Explore selected work <span aria-hidden="true">↓</span></a>
+            <a class="button button-quiet" href="https://www.linkedin.com/in/valavala-charan-teja-b02815251/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn <span aria-hidden="true">↗</span></a>
           </div>
+          <div class="hero-footnote"><span class="live-dot" aria-hidden="true"></span>Computer Science · B.E. student</div>
         </div>
-        <div
-          class="hero-art"
-          role="img"
-          aria-label="A map connecting retrieval, agents, evaluation, and product engineering"
-        >
-          <div class="orbit orbit-one" aria-hidden="true"></div>
-          <div class="orbit orbit-two" aria-hidden="true"></div>
-          <div class="core" aria-hidden="true">
-            <span>AI</span><small>ENGINEERING</small>
+        <div class="hero-visual" data-reveal data-delay="140" role="img" aria-label="An illustrated AI workflow connecting documents, retrieval, evidence, and evaluation">
+          <div class="visual-topline"><span>HOW THE SYSTEM THINKS</span><span>01 — 04</span></div>
+          <div class="workflow" aria-hidden="true">
+            <div class="workflow-orbit orbit-a"></div>
+            <div class="workflow-orbit orbit-b"></div>
+            <div class="workflow-core"><span class="core-glyph">✳</span><span>AI SYSTEM</span></div>
+            <div class="workflow-node node-source"><span class="node-icon icon-file">▤</span><span>Source<br>material</span></div>
+            <div class="workflow-node node-search"><span class="node-icon icon-search">⌕</span><span>Retrieval<br>& tools</span></div>
+            <div class="workflow-node node-proof"><span class="node-icon icon-proof">✓</span><span>Evidence<br>trail</span></div>
+            <div class="workflow-node node-score"><span class="node-icon icon-score">↗</span><span>Evaluation<br>& feedback</span></div>
+            <span class="workflow-spark spark-a"></span>
+            <span class="workflow-spark spark-b"></span>
+            <span class="workflow-spark spark-c"></span>
           </div>
-          <div class="node node-retrieval" aria-hidden="true">
-            <i>01</i><span>Retrieval</span>
-          </div>
-          <div class="node node-agents" aria-hidden="true">
-            <i>02</i><span>Agents</span>
-          </div>
-          <div class="node node-eval" aria-hidden="true">
-            <i>03</i><span>Evaluation</span>
-          </div>
-          <div class="node node-product" aria-hidden="true">
-            <i>04</i><span>Product</span>
-          </div>
-          <div class="orbit-label" aria-hidden="true">
-            SYSTEMS THAT SHOW THEIR WORK
-          </div>
+          <div class="visual-caption"><span>BUILD WITH TRACEABILITY</span><span class="caption-rule"></span><span>MEASURE WHAT MATTERS</span></div>
         </div>
-        <div class="scroll-cue"><span></span> Scroll to explore</div>
+        <a class="scroll-cue" href="#work" aria-label="Scroll to selected work"><span>SCROLL TO EXPLORE</span><i aria-hidden="true">↓</i></a>
       </section>
 
-      <section class="work-section" id="work">
-        <div class="section-heading">
+      <section class="work-section section-shell" id="work" aria-labelledby="work-title">
+        <div class="section-heading" data-reveal>
           <div>
-            <p class="eyebrow">Selected engineering work</p>
-            <h2>Four problems.<br><em>Four different systems.</em></h2>
+            <p class="eyebrow"><span class="eyebrow-line"></span>Selected work</p>
+            <h2 id="work-title">Three systems.<br><span>Different questions.</span></h2>
           </div>
-          <p class="section-note">
-            Four independent builds across retrieval, research tooling,
-            evaluation, and workflow design. Each card links to the code and
-            states what its measurements do and do not show.
-          </p>
+          <p class="section-intro">I like projects where the hard part is more than a prompt: finding the right evidence, making data useful, or keeping an automated workflow under control.</p>
         </div>
 
         <div class="project-grid">
-          <article class="project-card project-campus">
-            <div class="card-top">
-              <span class="project-index">01 / SEARCH PRODUCT</span
-              ><span class="project-icon">↗</span>
-            </div>
-            <div class="card-visual campus-visual">
-              <div class="doc-sheet">
-                <span class="doc-line wide"></span><span class="doc-line"></span
-                ><span class="doc-line medium"></span>
-                <div class="source-pill">OFFICIAL SOURCE <b>↗</b></div>
+          <article class="project-card project-card-featured" data-reveal>
+            <div class="project-copy">
+              <div class="project-topline"><span>01 / DOCUMENT INTELLIGENCE</span><span class="project-mark" aria-hidden="true">01</span></div>
+              <p class="project-kicker">HYBRID RETRIEVAL · ONE BITS-SPECIFIC USE CASE</p>
+              <h3>Course Copilot</h3>
+              <p class="project-description">A document assistant that combines dense embeddings with SQLite FTS5 search, fuses the results, and returns file and page evidence. It can abstain when sources do not support an answer; optional local generation uses Ollama.</p>
+              <div class="project-tags" aria-label="Technologies and capabilities">
+                <span>Python</span><span>FastAPI</span><span>Sentence Transformers</span><span>SQLite FTS5</span><span>RRF</span>
               </div>
-              <div class="answer-bubble">Grounded answer <span>01</span></div>
-              <div class="connector"></div>
+              <div class="project-result">
+                <div class="result-number">0.846 <span>Hit@1</span></div>
+                <div class="result-number">0.923 <span>MRR</span></div>
+                <p>67 manually labeled queries: 52 answerable and 15 out of scope. Ranking scores measure source retrieval, not generated-answer correctness.</p>
+              </div>
+              <a class="project-link" href="https://github.com/charanvalavala/course-copilot" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a>
             </div>
-            <p class="project-type">LOCAL BM25 · BITS HYDERABAD</p>
-            <h3>Campus Evidence Finder</h3>
-            <p class="project-description">
-              A browser-only search app over four official campus sources, with
-              freshness-aware ranking, linked evidence, and guardrails around
-              cohort-specific scholarship claims.
-            </p>
-            <div class="tag-row">
-              <span>BM25</span><span>Source citations</span
-              ><span>Hit@3 / MRR@3</span>
-            </div>
-            <div class="card-footer">
-              <span>9 labels · Hit@3 1.00 · MRR@3 1.000</span
-              ><div class="card-links"><a
-                href="https://charanvalavala.github.io/campus-evidence-assistant/"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Demo ↗</a
-              ><a
-                href="https://github.com/charanvalavala/campus-evidence-assistant"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Code ↗</a></div>
+            <div class="project-visual visual-course" aria-hidden="true">
+              <div class="mock-window">
+                <div class="mock-window-bar"><i></i><i></i><i></i><span>COURSE COPILOT / ASK</span></div>
+                <div class="mock-prompt"><span class="prompt-label">QUESTION</span><span>When does the next semester begin?</span><b>↵</b></div>
+                <div class="mock-evidence-label"><span>RETRIEVED EVIDENCE</span><span>RANKED SOURCES</span></div>
+                <div class="mock-evidence evidence-one"><span class="evidence-rank">01</span><span class="evidence-lines"><i></i><i></i><i></i></span><span class="evidence-chip">calendar.pdf · p. 2</span></div>
+                <div class="mock-evidence evidence-two"><span class="evidence-rank">02</span><span class="evidence-lines"><i></i><i></i><i></i></span><span class="evidence-chip">bulletin.pdf · p. 8</span></div>
+                <div class="mock-answer"><span class="answer-check">✓</span><span>Answer grounded in retrieved sources</span><span class="answer-arrow">↗</span></div>
+              </div>
+              <div class="visual-index">RETRIEVE <b>→</b> INSPECT <b>→</b> EVALUATE</div>
+              <span class="visual-orb orb-course"></span>
             </div>
           </article>
 
-          <article class="project-card project-research">
-            <div class="card-top">
-              <span class="project-index">02 / RESEARCH AGENT</span
-              ><span class="project-icon">⌘</span>
+          <article class="project-card" data-reveal data-delay="80">
+            <div class="project-topline"><span>02 / FINANCIAL DOCUMENTS</span><span class="project-mark" aria-hidden="true">02</span></div>
+            <div class="project-visual visual-formscope" aria-hidden="true">
+              <div class="formscope-screen">
+                <div class="screen-heading"><span>COMPANY SNAPSHOT</span><b>EDGAR / XBRL</b></div>
+                <div class="company-row"><span class="company-avatar">A</span><span class="company-name">Company facts<small>Public filing data</small></span><span class="company-live"><i></i> SOURCE LINKED</span></div>
+                <div class="chart-area"><div class="chart-y"><i></i><i></i><i></i></div><div class="chart-grid"><i></i><i></i><i></i></div><div class="chart-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><div class="chart-years"><span>FY</span><span>FY</span><span>FY</span><span>FY</span><span>FY</span><span>FY</span><span>FY</span></div></div>
+                <div class="filing-row"><span class="filing-dot"></span><span>Annual filing · primary source</span><b>↗</b></div>
+              </div>
+              <span class="visual-index">RAW FACTS <b>→</b> VISIBLE FORMULAS</span>
+              <span class="visual-orb orb-formscope"></span>
             </div>
-            <div
-              class="card-visual research-visual"
-              role="img"
-              aria-label="Illustrative search interface; these are not live arXiv results"
-            >
-              <div class="research-query">
-                tool-using agents <span>ILLUSTRATION</span>
-              </div>
-              <div class="paper paper-a">
-                <b>01</b><span>Agent evaluation methods</span
-                ><i>sample card · not a live result</i>
-              </div>
-              <div class="paper paper-b">
-                <b>02</b><span>Tools and reasoning</span
-                ><i>sample card · not a live result</i>
-              </div>
-              <div class="paper paper-c">
-                <b>03</b><span>Benchmark design</span
-                ><i>sample card · not a live result</i>
-              </div>
-            </div>
-            <p class="project-type">PYTHON TOOL · AGENT EXTENSION</p>
-            <h3>arXiv Research Agent</h3>
-            <p class="project-description">
-              A bounded arXiv search tool that returns abstracts, author/date
-              metadata, canonical links, and structured provenance for an
-              agent workflow.
-            </p>
-            <div class="tag-row">
-              <span>Tool use</span><span>Failure handling</span
-              ><span>Provenance</span>
-            </div>
-            <div class="card-footer">
-              <span>5-result cap · 12 s timeout · 4 tests</span
-              ><a
-                href="https://github.com/charanvalavala/arxiv-research-agent"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Code ↗</a
-              >
+            <div class="project-copy">
+              <p class="project-kicker">SEC EDGAR · XBRL · SOURCE-LINKED</p>
+              <h3>FormScope</h3>
+              <p class="project-description">An SEC filings explorer that turns reported company facts into annual trends, shows the formulas behind derived metrics, and ranks passages from a company’s latest 10-K with links back to EDGAR.</p>
+              <div class="project-tags"><span>Python</span><span>FastAPI</span><span>XBRL</span><span>SEC EDGAR</span></div>
+              <a class="project-link" href="https://github.com/charanvalavala/formscope" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a>
             </div>
           </article>
 
-          <article class="project-card project-docs">
-            <div class="card-top">
-              <span class="project-index">03 / RETRIEVAL EVALUATION</span
-              ><span class="project-icon">▤</span>
-            </div>
-            <div class="card-visual docs-visual">
-              <div class="manual-page">
-                <div class="manual-head">
-                  Raspberry Pi 5 <small>PRODUCT BRIEF</small>
-                </div>
-                <div class="spec-row">
-                  <span>CPU</span><b>2.4 GHz</b><i>01</i>
-                </div>
-                <div class="spec-row">
-                  <span>DISPLAY</span><b>Dual 4Kp60</b><i>02</i>
-                </div>
-                <div class="spec-row">
-                  <span>INTERFACE</span><b>PCIe 2.0 x1</b><i>03</i>
-                </div>
+          <article class="project-card" data-reveal data-delay="160">
+            <div class="project-topline"><span>03 / INCIDENT WORKFLOWS</span><span class="project-mark" aria-hidden="true">03</span></div>
+            <div class="project-visual visual-incident" aria-hidden="true">
+              <div class="incident-screen">
+                <div class="incident-heading"><span>INCIDENT INVESTIGATION</span><span class="incident-state">SIMULATION</span></div>
+                <div class="incident-step step-done"><b>01</b><span class="step-icon">✓</span><span>Read service logs<small>Evidence captured</small></span><i>READ ONLY</i></div>
+                <div class="incident-step step-done"><b>02</b><span class="step-icon">✓</span><span>Inspect metrics<small>Evidence captured</small></span><i>READ ONLY</i></div>
+                <div class="incident-step step-current"><b>03</b><span class="step-icon">◇</span><span>Review proposed action<small>Waiting for human decision</small></span><i>APPROVAL</i></div>
+                <div class="approval-row"><span>Simulated action</span><span class="approval-button">Approve or reject</span></div>
               </div>
-              <div class="metric-stamp">TOP 5<br><small>EVIDENCE</small></div>
+              <span class="visual-index">OBSERVE <b>→</b> TRACE <b>→</b> REVIEW</span>
+              <span class="visual-orb orb-incident"></span>
             </div>
-            <p class="project-type">GO CLI · RETRIEVAL EVALUATION</p>
-            <h3>RAGFlow Retrieval Evaluator</h3>
-            <p class="project-description">
-              Evaluates retrieved chunks against manually labeled evidence
-              anchors for a public hardware brief. The benchmark measures
-              retrieval, not answer truth.
-            </p>
-            <div class="tag-row">
-              <span>Retrieval API</span><span>Evidence anchors</span
-              ><span>Hit@5 / MRR@5</span>
-            </div>
-            <div class="card-footer">
-              <span>6 evidence cases · corpus required</span
-              ><a
-                href="https://github.com/charanvalavala/ragflow-retrieval-evaluator"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Code ↗</a
-              >
-            </div>
-          </article>
-
-          <article class="project-card project-code">
-            <div class="card-top">
-              <span class="project-index">04 / ENGINEERING WORKFLOW</span
-              ><span class="project-icon">{ }</span>
-            </div>
-            <div class="card-visual code-visual">
-              <div class="code-window">
-                <div class="window-bar">
-                  <i></i><i></i><i></i><span>engineering brief.md</span>
-                </div>
-                <div class="code-lines">
-                  <span><b>01</b> inspect(repository)</span
-                  ><span><b>02</b> implement(high_impact_change)</span
-                  ><span><b>03</b> measure(reproducibly)</span
-                  ><span><b>04</b> document(tradeoffs)</span
-                  ><span><b>05</b> report(actual_results)</span>
-                </div>
-              </div>
-              <div class="run-state">
-                <span class="status-dot"></span>
-                EDITABLE TASK PROMPT
-              </div>
-            </div>
-            <p class="project-type">LOCAL WEB TOOL · TASK DESIGN</p>
-            <h3>AI Engineering Brief Builder</h3>
-            <p class="project-description">
-              Turns a rough engineering request into a structured handoff with
-              observable criteria, verification steps, and a Markdown export.
-              Brief content stays in the browser.
-            </p>
-            <div class="tag-row">
-              <span>Vanilla JavaScript</span><span>Task UX</span
-              ><span>Local-first</span>
-            </div>
-            <div class="card-footer">
-              <span>3 tests · copy + Markdown export</span
-              ><div class="card-links"><a
-                href="https://charanvalavala.github.io/ai-engineering-brief-builder/"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Demo ↗</a
-              ><a
-                href="https://github.com/charanvalavala/ai-engineering-brief-builder"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Code ↗</a></div>
+            <div class="project-copy">
+              <p class="project-kicker">STATEFUL SIMULATOR · HUMAN APPROVAL</p>
+              <h3>IncidentPilot</h3>
+              <p class="project-description">A bounded incident-triage workflow that investigates seeded scenarios through read-only tools, stores a replayable SQLite event trace, and requires a human decision before recording a simulated action. Optional local Ollama reasoning stays behind the same controls.</p>
+              <div class="project-tags"><span>Python</span><span>FastAPI</span><span>SQLite</span><span>Ollama optional</span></div>
+              <a class="project-link" href="https://github.com/charanvalavala/incidentpilot" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a>
             </div>
           </article>
         </div>
-        <p class="portfolio-note">
-          <span>↳</span>
-          Metrics are scoped to each README’s labeled set; the retrieval
-          evaluator needs a configured RAGFlow corpus for a live score.
-        </p>
+        <p class="work-note"><span aria-hidden="true">✳</span> Each project is an original build. The BITS academic documents are used only in Course Copilot’s sample corpus; it is not an official BITS Pilani service.</p>
       </section>
 
-      <section class="approach-section" id="approach">
-        <div class="approach-head">
-          <p class="eyebrow">How I build</p>
-          <h2>Engineering is<br><em>the whole loop.</em></h2>
+      <section class="approach-section section-shell" id="about" aria-labelledby="about-title">
+        <div class="approach-intro" data-reveal>
+          <p class="eyebrow"><span class="eyebrow-line"></span>My approach</p>
+          <h2 id="about-title">Build with<br><span>the edges in view.</span></h2>
+          <p>I’m interested in the parts of applied AI that turn a demo into a system someone can inspect: data boundaries, failure states, evaluation, and a usable interface.</p>
+          <a class="inline-link" href="https://www.linkedin.com/in/valavala-charan-teja-b02815251/" target="_blank" rel="noopener noreferrer">More about me on LinkedIn <span aria-hidden="true">↗</span></a>
         </div>
-        <div class="approach-steps">
-          <div class="approach-step">
-            <span>01</span>
-            <div>
-              <h3>Start with evidence</h3>
-              <p>
-                Use primary sources and real user needs. Keep the corpus,
-                assumptions, and data boundaries visible.
-              </p>
-            </div>
-          </div>
-          <div class="approach-step">
-            <span>02</span>
-            <div>
-              <h3>Make it measurable</h3>
-              <p>
-                Define a small labeled set and a clear metric before tuning
-                retrieval, prompts, or agent behavior.
-              </p>
-            </div>
-          </div>
-          <div class="approach-step">
-            <span>03</span>
-            <div>
-              <h3>Ship the workflow</h3>
-              <p>
-                Connect the model to a product surface, handle failure states,
-                and make the result easy to run again.
-              </p>
-            </div>
-          </div>
-          <div class="approach-step">
-            <span>04</span>
-            <div>
-              <h3>Report what happened</h3>
-              <p>
-                Share actual measurements, trade-offs, and gaps. Never turn a
-                benchmark plan into a result.
-              </p>
-            </div>
-          </div>
+        <div class="approach-list" data-reveal data-delay="100">
+          <article class="approach-item"><span>01</span><div><h3>Find the evidence</h3><p>Make the source visible, preserve provenance, and be clear when the system cannot answer.</p></div><b aria-hidden="true">↗</b></article>
+          <article class="approach-item"><span>02</span><div><h3>Measure the actual behavior</h3><p>Use labeled examples and report what a metric captures—and where its limits begin.</p></div><b aria-hidden="true">↗</b></article>
+          <article class="approach-item"><span>03</span><div><h3>Bound the actions</h3><p>Give tools narrow jobs, make state inspectable, and keep people in control of consequential steps.</p></div><b aria-hidden="true">↗</b></article>
         </div>
       </section>
 
-      <section class="contact-section" id="contact">
-        <p class="eyebrow">Building toward applied AI engineering</p>
-        <h2>Build the evidence.<br><em>Then make the claim.</em></h2>
-        <p class="contact-copy">
-          Open the projects, inspect the changes, and see what each evaluation
-          actually measures.
-        </p>
-        <a
-          class="button button-primary"
-          href="https://github.com/charanvalavala"
-          target="_blank"
-          rel="noopener noreferrer"
-          >View my GitHub profile <span aria-hidden="true">↗</span></a
-        >
+      <section class="experience-section section-shell" aria-labelledby="experience-title">
+        <div class="experience-heading" data-reveal>
+          <p class="eyebrow"><span class="eyebrow-line"></span>Experience</p>
+          <h2 id="experience-title">A first step<br>in <span>product engineering.</span></h2>
+        </div>
+        <article class="experience-card" data-reveal data-delay="100">
+          <div class="experience-meta"><span>MAY — JULY 2024</span><span>200+ STUDENTS & TRAINEES</span></div>
+          <div class="experience-main"><div><p class="experience-role">Web Development Intern</p><h3>MDDTI SBC</h3></div><span class="experience-arrow" aria-hidden="true">↗</span></div>
+          <p class="experience-description">Helped build the organization’s website and an online test platform for its students and trainees, using HTML and CSS on the frontend with MongoDB-backed data.</p>
+          <div class="project-tags"><span>HTML</span><span>CSS</span><span>MongoDB</span><span>Web development</span></div>
+        </article>
+      </section>
+
+      <section class="contact-section section-shell" id="contact" aria-labelledby="contact-title">
+        <div class="contact-orbit" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div class="contact-content" data-reveal>
+          <p class="eyebrow"><span class="eyebrow-line"></span>Get in touch</p>
+          <h2 id="contact-title">Curious about<br><span>how it works?</span></h2>
+          <p>Explore the code, inspect the evaluation, or reach out to talk about applied AI engineering.</p>
+          <div class="contact-actions">
+            <a class="button button-primary" href="https://github.com/charanvalavala" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+            <a class="button button-outline" href="https://www.linkedin.com/in/valavala-charan-teja-b02815251/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
       </section>
     </main>
-    <footer>
-      <span>© 2026 Charan Teja Valavala</span
-      ><span>Applied AI · BITS Pilani, Hyderabad Campus</span
-      ><a
-        href="https://github.com/charanvalavala"
-        target="_blank"
-        rel="noopener noreferrer"
-        >GitHub ↗</a
-      >
+
+    <footer class="site-footer section-shell">
+      <a class="brand brand-footer" href="#top" aria-label="Back to top"><span class="brand-mark" aria-hidden="true">C</span><span>Charan Teja Valavala</span></a>
+      <span>Applied AI engineering · Hyderabad, India</span>
+      <a href="#top">Back to top ↑</a>
     </footer>
   </body>
 </html>
