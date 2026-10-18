@@ -1646,3 +1646,160 @@ p {
     transform: none;
   }
 }
+
+.project-description {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.project-tags span {
+  font-size: 10px;
+}
+
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  margin-top: auto;
+}
+
+.project-link {
+  margin-top: 0;
+  font-size: 12px;
+}
+
+.project-result p {
+  font-size: 12px;
+}
+
+.result-number span {
+  font-size: 10px;
+}
+
+.experience-description {
+  font-size: 14px;
+}
+
+.experience-meta {
+  font-size: 10px;
+}
+
+.work-note {
+  font-size: 12px;
+}
+
+.work-context {
+  margin: -10px 0 24px;
+  padding: 13px 16px;
+  border-left: 3px solid var(--green);
+  background: rgb(255 254 250 / 76%);
+  color: var(--ink-soft);
+  font-size: 14px;
+}
+
+.work-context span {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--muted);
+  font: 10px var(--mono);
+  letter-spacing: .08em;
+}
+
+.work-context a {
+  margin-left: 7px;
+  color: var(--green);
+  font-weight: 700;
+}
+
+.visual-label {
+  position: absolute;
+  z-index: 4;
+  top: 12px;
+  left: 12px;
+  padding: 5px 8px;
+  border: 1px solid rgb(255 255 255 / 25%);
+  border-radius: 99px;
+  background: rgb(23 35 31 / 78%);
+  color: white;
+  font: 9px var(--mono);
+  letter-spacing: .04em;
+}
+
+.js [data-reveal] {
+  transform: translateY(14px);
+  transition:
+    opacity 420ms cubic-bezier(.2, .8, .2, 1),
+    transform 420ms cubic-bezier(.2, .8, .2, 1);
+}
+
+.workflow-orbit,
+.core-glyph,
+.workflow-node,
+.workflow-spark,
+.visual-orb {
+  animation: none;
+}
+
+.js .hero-visual.is-visible .workflow-core {
+  animation: core-arrive 560ms cubic-bezier(.2, .8, .2, 1) both;
+}
+
+.js .hero-visual.is-visible .workflow-node {
+  animation: node-arrive 520ms cubic-bezier(.2, .8, .2, 1) both;
+}
+
+.js .hero-visual.is-visible .node-search { animation-delay: 60ms; }
+.js .hero-visual.is-visible .node-proof { animation-delay: 120ms; }
+.js .hero-visual.is-visible .node-score { animation-delay: 180ms; }
+
+.project-card {
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .project-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--line-dark);
+    box-shadow: 0 20px 50px rgb(36 53 44 / 9%);
+  }
+}
+
+@keyframes core-arrive {
+  from { opacity: .55; transform: scale(.92); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes node-arrive {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 720px) {
+  .project-description { font-size: 14px; }
+  .project-actions { gap: 10px 16px; }
+  .project-link { font-size: 12px; }
+  .work-context { margin-top: -4px; font-size: 13px; }
+  .experience-meta { font-size: 10px; }
+}
+
+@media (max-width: 430px) {
+  .experience-meta { font-size: 9px; }
+  .work-context a { display: inline-block; margin: 5px 0 0; }
+  .workflow-core { font-size: 9px; }
+  .workflow-node { font-size: 10px; }
+  .visual-caption { font-size: 8px; }
+  .mock-prompt { font-size: 9px; }
+  .prompt-label,
+  .mock-evidence-label,
+  .evidence-chip { font-size: 8px; }
+  .site-footer { font-size: 9px; }
+}
+
+.chart-bars span { animation: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .js .hero-visual.is-visible .workflow-core,
+  .js .hero-visual.is-visible .workflow-node {
+    animation: none;
+  }
+}

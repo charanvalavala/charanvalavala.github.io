@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A browser-only sample walkthrough of Course Copilot's source-grounded document retrieval experience.">
+    <title>Course Copilot — Sample Walkthrough</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../demo.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="demo-wrap">
+      <header class="demo-header">
+        <a class="demo-brand" href="../../">Charan Teja Valavala</a>
+        <a class="demo-back" href="../../#work">← All projects</a>
+      </header>
+      <main class="demo-main">
+        <p class="eyebrow">Document retrieval · Browser sample</p>
+        <h1>Course Copilot</h1>
+        <p class="demo-intro">Ask a question and inspect the source note that supports it. This small sample shows evidence retrieval and citation behavior without a hosted model.</p>
+        <div class="notice"><span class="notice-mark" aria-hidden="true">i</span><span><strong>Static walkthrough.</strong> It searches three fixed notes in your browser using simple lexical matching. The full repository app uses hybrid dense and SQLite FTS5 retrieval, reciprocal-rank fusion, and an API; this page is not connected to that backend.</span></div>
+        <section class="demo-panel" aria-labelledby="panel-title">
+          <div class="panel-top"><h2 id="panel-title" class="panel-title">Search the sample notes</h2><span class="demo-label">3 SOURCE NOTES</span></div>
+          <form class="demo-form" id="search-form">
+            <label class="sr-only" for="question">Question</label>
+            <input class="demo-input" id="question" name="question" autocomplete="off" placeholder="Try: When does semester II classwork begin?" required>
+            <button class="demo-button" type="submit">Find evidence <span aria-hidden="true">↗</span></button>
+          </form>
+          <div class="suggestions" aria-label="Suggested questions">
+            <button class="suggestion" type="button" data-query="When does semester II classwork begin?">Semester II start date</button>
+            <button class="suggestion" type="button" data-query="What does course registration require?">Course permission</button>
+            <button class="suggestion" type="button" data-query="How many regular semesters are there?">Regular semesters</button>
+          </div>
+          <div class="results-head"><h2 id="result-title">Evidence results</h2><span id="result-count">Choose a question to begin</span></div>
+          <div class="result-list" id="results" aria-live="polite"><div class="empty-state">Your results will show the matching note and its source link here.</div></div>
+          <div class="demo-footer"><a href="https://github.com/charanvalavala/course-copilot" target="_blank" rel="noopener noreferrer">Open the full project repository ↗</a><span>Sample academic sources are linked to official BITS Pilani documents.</span></div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

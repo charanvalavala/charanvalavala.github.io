@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A browser-only sample walkthrough of IncidentPilot's approval-gated incident simulation.">
+    <title>IncidentPilot — Sample Walkthrough</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../demo.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="demo-wrap">
+      <header class="demo-header">
+        <a class="demo-brand" href="../../">Charan Teja Valavala</a>
+        <a class="demo-back" href="../../#work">← All projects</a>
+      </header>
+      <main class="demo-main">
+        <p class="eyebrow">Incident workflows · Browser simulation</p>
+        <h1>IncidentPilot</h1>
+        <p class="demo-intro">Inspect seeded service signals, review a proposed response, and record an approval decision in this browser-only simulation.</p>
+        <div class="notice"><span class="notice-mark" aria-hidden="true">i</span><span><strong>Simulation only.</strong> The scenarios and diagnoses are fixed examples. This page does not connect to production systems, run an AI model, or execute an operational action. The repository app records state and traces in a local SQLite simulator.</span></div>
+        <section class="demo-panel" aria-labelledby="panel-title">
+          <div class="panel-top"><h2 id="panel-title" class="panel-title">Review an incident scenario</h2><span class="demo-label">SEEDED SCENARIOS</span></div>
+          <label class="sr-only" for="scenario">Choose a scenario</label>
+          <select class="demo-select" id="scenario">
+            <option value="latency">API latency after release</option>
+            <option value="pool">Payment database pool exhausted</option>
+          </select>
+          <p class="scenario-summary" id="scenario-summary"></p>
+          <div class="split">
+            <section class="data-block" aria-labelledby="signals-title"><h2 id="signals-title">Observed signals</h2><div id="signals"></div></section>
+            <section class="data-block" aria-labelledby="diagnosis-title"><h2 id="diagnosis-title">Scenario diagnosis</h2><p id="diagnosis"></p><div class="decision-row"><button class="demo-button" id="approve" type="button">Approve simulation</button><button class="demo-button secondary" id="reject" type="button">Reject</button></div><p id="decision" aria-live="polite"></p></section>
+          </div>
+          <div class="results-head"><h2>Local event trace</h2><span>THIS BROWSER SESSION</span></div>
+          <ol class="trace" id="trace" aria-live="polite"></ol>
+          <div class="demo-footer"><a href="https://github.com/charanvalavala/incidentpilot" target="_blank" rel="noopener noreferrer">Open the full project repository ↗</a><span>Approval records only a local demo decision.</span></div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
