@@ -171,7 +171,7 @@ a:focus-visible {
 .hero::before {
   position: absolute;
   top: 72px;
-  right: -9vw;
+  right: 0;
   width: 55vw;
   height: 610px;
   border-radius: 50%;
@@ -1550,7 +1550,7 @@ p {
   .site-nav { gap: 18px; font-size: 11px; }
   .site-nav .nav-link { gap: 6px; padding: 7px 10px; }
   .hero { min-height: 0; grid-template-columns: 1fr; gap: 35px; padding-top: 77px; padding-bottom: 85px; }
-  .hero::before { top: 280px; right: -30vw; width: 100vw; height: 480px; }
+  .hero::before { top: 280px; right: 0; width: 100vw; height: 480px; }
   .hero h1 { max-width: 650px; margin-top: 21px; font-size: clamp(61px, 13vw, 88px); }
   .hero-summary { max-width: 570px; font-size: 14px; }
   .hero-visual { width: min(100%, 520px); height: 395px; justify-self: center; }
