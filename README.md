@@ -8,6 +8,8 @@ Open `index.html` in a browser. The page has no build step or runtime dependency
 
 Each project has a browser-only walkthrough with fixed sample data. These pages are static previews, not the hosted FastAPI services; use each repository's instructions to run the complete backend app locally or in Docker.
 
+The `resume.pdf` file is the current one-page resume linked from the site navigation.
+
 ## Design and accessibility
 
 - Responsive layout for wide screens, tablets, and phones.

@@ -37,6 +37,9 @@
         <a class="nav-link" href="https://github.com/charanvalavala" target="_blank" rel="noopener noreferrer">
           GitHub <span aria-hidden="true">↗</span>
         </a>
+        <a class="nav-link" href="resume.pdf" target="_blank" rel="noopener noreferrer">
+          Resume <span aria-hidden="true">↗</span>
+        </a>
       </nav>
     </header>
 
@@ -94,9 +97,9 @@
                 <span>Python</span><span>FastAPI</span><span>Sentence Transformers</span><span>SQLite FTS5</span><span>RRF</span>
               </div>
               <div class="project-result">
-                <div class="result-number">0.846 <span>Hit@1</span></div>
-                <div class="result-number">0.923 <span>MRR</span></div>
-                <p>67 manually labeled queries: 52 answerable and 15 out of scope. Ranking scores measure source retrieval, not generated-answer correctness.</p>
+                <div class="result-number">0.923 <span>Hit@1</span></div>
+                <div class="result-number">0.962 <span>MRR</span></div>
+                <p>Weighted 2:1 BM25:dense fusion reached Hit@5 1.000 on 52 answerable queries across 13 notes; 14/15 out-of-scope queries abstained correctly. Scores measure source retrieval, not answer correctness.</p>
               </div>
               <div class="project-actions">
                 <a class="project-link" href="demos/course-copilot/">Try sample walkthrough <span aria-hidden="true">↗</span></a>
@@ -136,6 +139,11 @@
               <h3>FormScope</h3>
               <p class="project-description">An SEC filings explorer that turns reported company facts into annual trends, shows the formulas behind derived metrics, and ranks passages from a company’s latest 10-K with links back to EDGAR.</p>
               <div class="project-tags"><span>Python</span><span>FastAPI</span><span>XBRL</span><span>SEC EDGAR</span></div>
+              <div class="project-result">
+                <div class="result-number">40/40 <span>facts matched</span></div>
+                <div class="result-number">20 <span>issuers</span></div>
+                <p>Annual revenue and net income matched inline XBRL values from 20 pinned 10-K filings against FormScope’s Company Facts extraction.</p>
+              </div>
               <div class="project-actions">
                 <a class="project-link" href="demos/formscope/">Try sample walkthrough <span aria-hidden="true">↗</span></a>
                 <a class="project-link" href="https://github.com/charanvalavala/formscope" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a>
@@ -160,7 +168,7 @@
             <div class="project-copy">
               <p class="project-kicker">STATEFUL SIMULATOR · HUMAN APPROVAL</p>
               <h3>IncidentPilot</h3>
-              <p class="project-description">A bounded incident-triage workflow that investigates seeded scenarios through read-only tools, stores a replayable SQLite event trace, and requires a human decision before recording a simulated action. Optional local Ollama reasoning stays behind the same controls.</p>
+              <p class="project-description">A bounded incident-triage workflow that investigates seeded scenarios through read-only tools, stores a replayable SQLite event trace, and requires a human decision before recording a simulated action. Its repository includes a 20-case Ollama evaluation harness; model scores are pending a local run.</p>
               <div class="project-tags"><span>Python</span><span>FastAPI</span><span>SQLite</span><span>Ollama optional</span></div>
               <div class="project-actions">
                 <a class="project-link" href="demos/incidentpilot/">Try sample walkthrough <span aria-hidden="true">↗</span></a>
