@@ -21,10 +21,11 @@
       href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap"
       rel="stylesheet"
     >
-    <link rel="stylesheet" href="styles.css?v=20261024-1">
-    <script src="script.js?v=20261024-1" defer></script>
+    <link rel="stylesheet" href="styles.css?v=20261024-2">
+    <script src="script.js?v=20261024-2" defer></script>
   </head>
   <body>
+    <span class="page-progress" aria-hidden="true"></span>
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <a class="brand" href="#top" aria-label="Charan Teja Valavala home">
@@ -32,9 +33,10 @@
         <span>Charan Teja Valavala</span>
       </a>
       <nav class="site-nav" aria-label="Main navigation">
-        <a href="#work">Work</a>
-        <a href="#experience">Experience</a>
-        <a href="#about">About</a>
+        <span class="nav-indicator" aria-hidden="true"></span>
+        <a class="nav-section-link" href="#work">Work</a>
+        <a class="nav-section-link" href="#experience">Experience</a>
+        <a class="nav-section-link" href="#about">About</a>
         <a class="nav-link" href="https://github.com/charanvalavala" target="_blank" rel="noopener noreferrer">
           GitHub <span aria-hidden="true">↗</span>
         </a>
@@ -48,7 +50,7 @@
       <section class="hero section-shell" id="top" aria-labelledby="hero-title">
         <div class="hero-copy" data-reveal>
           <p class="eyebrow"><span class="eyebrow-line"></span>Computer Science · Hyderabad, India</p>
-          <h1 id="hero-title">I’m Charan.<br><span>I build software.</span></h1>
+          <h1 id="hero-title"><span class="hero-title-line">I’m Charan.</span><span class="hero-title-line">I build software.</span></h1>
           <p class="hero-summary">
             I study Computer Science at BITS Pilani, Hyderabad. My recent work covers hybrid document search, financial filing data, and software tools for real workflows.
           </p>
