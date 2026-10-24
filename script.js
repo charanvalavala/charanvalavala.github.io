@@ -28,3 +28,38 @@ if ("IntersectionObserver" in window) {
     item.classList.add("is-visible");
   }
 }
+
+const sectionLinks = [...document.querySelectorAll('.site-nav a[href^="#"]')];
+const linkedSections = sectionLinks
+  .map((link) => ({ link, section: document.querySelector(link.getAttribute("href")) }))
+  .filter(({ section }) => section);
+
+for (const { link } of linkedSections) {
+  link.addEventListener("click", () => {
+    for (const item of sectionLinks) item.removeAttribute("data-active");
+    link.setAttribute("data-active", "true");
+  });
+}
+
+if ("IntersectionObserver" in window && linkedSections.length) {
+  const sectionObserver = new IntersectionObserver(
+    (entries) => {
+      const visible = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((left, right) => right.intersectionRatio - left.intersectionRatio)[0];
+      if (!visible) return;
+      for (const { link, section } of linkedSections) {
+        if (section === visible.target) {
+          link.setAttribute("data-active", "true");
+          link.setAttribute("aria-current", "location");
+        } else {
+          link.removeAttribute("data-active");
+          link.removeAttribute("aria-current");
+        }
+      }
+    },
+    { rootMargin: "-32% 0px -58% 0px", threshold: [0, 0.25, 0.5, 0.75] }
+  );
+
+  for (const { section } of linkedSections) sectionObserver.observe(section);
+}
