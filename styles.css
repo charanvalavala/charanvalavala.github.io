@@ -2495,3 +2495,188 @@ p {
     transform: none;
   }
 }
+
+:root {
+  color-scheme: dark;
+  --paper: #111517;
+  --paper-deep: #171d1f;
+  --panel: #202729;
+  --ink: #f1ede6;
+  --ink-soft: #d2cdc4;
+  --muted: #a1a7a2;
+  --muted-light: #858d88;
+  --line: #30393b;
+  --line-dark: #485254;
+  --green: #f2a66b;
+  --green-bright: #ffd08a;
+  --blue: #8eabef;
+  --mint: #303638;
+}
+
+body::before {
+  background-image: radial-gradient(#a29b8e 0.45px, transparent 0.45px);
+  opacity: .045;
+}
+
+.site-header {
+  border-bottom-color: rgb(232 226 214 / 9%);
+  background: rgb(17 21 23 / 88%);
+}
+
+.hero::before {
+  background: radial-gradient(ellipse, rgb(242 166 107 / 10%), transparent 68%);
+}
+
+.button-primary {
+  background: var(--green);
+  color: #201915;
+}
+
+.button-primary:hover {
+  background: var(--green-bright);
+  box-shadow: 0 10px 26px rgb(242 166 107 / 17%);
+}
+
+.live-dot,
+.company-live i {
+  background: var(--green);
+  box-shadow: 0 0 0 3px rgb(242 166 107 / 13%);
+}
+
+.work-section {
+  border-color: rgb(232 226 214 / 8%);
+  background: var(--paper-deep);
+}
+
+.project-card,
+.experience-card {
+  border-color: var(--line);
+  background: var(--panel);
+}
+
+.project-card:hover {
+  border-color: #596365;
+  box-shadow: 0 22px 54px rgb(0 0 0 / 26%);
+}
+
+.project-tags span {
+  border-color: #3b4547;
+  background: #252c2e;
+  color: #d7c7b7;
+}
+
+.work-context {
+  border-left-color: var(--green);
+  background: #202729;
+  color: var(--ink-soft);
+}
+
+.visual-course,
+.visual-formscope,
+.visual-incident {
+  background:
+    radial-gradient(ellipse at 74% 24%, rgb(242 166 107 / 18%), transparent 40%),
+    linear-gradient(145deg, #252b2d, #171d1f 76%);
+}
+
+.mock-window,
+.formscope-screen,
+.incident-screen {
+  border-color: #434d4f;
+  background: #202729;
+  color: var(--ink-soft);
+}
+
+.mock-window-bar,
+.incident-heading {
+  border-color: #394244;
+}
+
+.mock-window-bar span,
+.prompt-label,
+.mock-evidence-label,
+.evidence-chip,
+.screen-heading,
+.incident-heading,
+.company-name small,
+.incident-step small,
+.approval-row {
+  color: #a4aaa4;
+}
+
+.mock-window-bar i { background: #69716d; }
+.mock-prompt { border-color: #3a4446; color: #e3ddd3; }
+.mock-prompt b,
+.evidence-rank,
+.mock-answer,
+.answer-arrow { color: var(--green); }
+.mock-evidence,
+.evidence-two { border-color: #394244; background: #272e30; }
+.evidence-lines i { background: #697471; }
+.evidence-chip { background: #343d3f; }
+.answer-check { background: #46382d; color: var(--green-bright); }
+
+.screen-heading b,
+.company-avatar {
+  background: #34373e;
+  color: #b1c5ff;
+}
+
+.company-name { color: #ece6dc; }
+.company-live { color: #d6bd9e; }
+.chart-y i,
+.chart-grid i { background: #3a4345; }
+.chart-bars span { background: var(--green); }
+.chart-years,
+.filing-row { color: #a4aaa4; }
+.filing-row { border-color: #394244; }
+.filing-row b { color: var(--green); }
+.filing-dot { background: var(--green); }
+
+.incident-state,
+.step-icon,
+.step-current .step-icon,
+.approval-button {
+  border-color: #4a4037;
+  background: #352e28;
+  color: #f3bd82;
+}
+
+.incident-step { border-color: #394244; color: #d4cec4; }
+.incident-step > b,
+.incident-step i { color: #9fa7a1; }
+.approval-button { border: 1px solid #574536; }
+
+.contact-section {
+  background:
+    radial-gradient(ellipse at 51% 105%, rgb(242 166 107 / 12%), transparent 48%),
+    #191f21;
+}
+
+.contact-content .eyebrow { color: var(--green-bright); }
+.contact-content .eyebrow-line { background: var(--green-bright); }
+.contact-section .button-primary { background: var(--green-bright); color: #201915; }
+.contact-section .button-primary:hover { background: #ffe0ae; }
+.contact-orbit span:first-child { border-color: rgb(242 166 107 / 12%); }
+
+.dev-panel {
+  border-color: #3d4748;
+  background: #171d1f;
+}
+
+.dev-panel-label,
+.dev-panel-row b,
+.dev-panel-foot span:first-child { color: var(--green-bright); }
+.dev-panel-foot i { background: var(--green-bright); box-shadow: 0 0 0 4px rgb(242 166 107 / 13%); }
+
+.site-nav a[href^="#"][data-active="true"] { color: var(--green); }
+.nav-indicator { background: rgb(242 166 107 / 12%); }
+.site-nav .nav-link:hover { border-color: var(--green); color: var(--green-bright); }
+
+.hero.has-pointer .dev-panel { box-shadow: 0 34px 82px rgb(0 0 0 / 38%); }
+.project-card.has-pointer:hover { border-color: #596365; box-shadow: 0 26px 62px rgb(0 0 0 / 30%); }
+.project-card::after { background: radial-gradient(460px circle at var(--spot-x, 50%) var(--spot-y, 50%), rgb(242 166 107 / 8%), transparent 62%); }
+
+@media (max-width: 720px) {
+  .work-section { background: var(--paper-deep); }
+}
