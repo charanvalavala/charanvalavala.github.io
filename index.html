@@ -1,257 +1,507 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#111517">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#121516" />
     <meta
       name="description"
-      content="Charan Teja Valavala is a computer science student at BITS Pilani, Hyderabad, building software, applied AI, and data tools."
-    >
-    <meta property="og:title" content="Charan Teja Valavala | Software and Applied AI">
+      content="Charan Teja Valavala, Computer Science student at BITS Pilani Hyderabad. Explore software projects, measured AI experiments and source code."
+    />
+    <meta property="og:title" content="Charan Teja Valavala — Selected work" />
     <meta
       property="og:description"
-      content="Projects in document search, financial data, backend systems, and AI engineering."
-    >
-    <meta property="og:type" content="website">
-    <title>Charan Teja Valavala | Software and Applied AI</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      content="Document retrieval, financial data and incident workflows. Working demos, code and measured results."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://charanvalavala.github.io/assets/formscope.png"
+    />
+    <title>Charan Teja Valavala | Selected work</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
       rel="stylesheet"
-    >
-    <link rel="stylesheet" href="styles.css?v=20261024-3">
-    <script src="script.js?v=20261024-3" defer></script>
+    />
+    <link rel="stylesheet" href="styles.css?v=20261031" />
+    <script src="script.js?v=20261031" defer></script>
   </head>
   <body>
-    <span class="page-progress" aria-hidden="true"></span>
-    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="skip" href="#main">Skip to content</a>
+    <div class="progress" aria-hidden="true"></div>
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="Charan Teja Valavala home">
-        <span class="brand-mark" aria-hidden="true">C</span>
-        <span>Charan Teja Valavala</span>
-      </a>
-      <nav class="site-nav" aria-label="Main navigation">
-        <span class="nav-indicator" aria-hidden="true"></span>
-        <a class="nav-section-link" href="#work">Work</a>
-        <a class="nav-section-link" href="#experience">Experience</a>
-        <a class="nav-section-link" href="#about">About</a>
-        <a class="nav-link" href="https://github.com/charanvalavala" target="_blank" rel="noopener noreferrer">
-          GitHub <span aria-hidden="true">↗</span>
-        </a>
-        <a class="nav-link" href="resume.pdf" target="_blank" rel="noopener noreferrer">
-          Resume <span aria-hidden="true">↗</span>
-        </a>
+      <a class="brand" href="#top" aria-label="Charan Teja Valavala home"
+        ><span>cv /</span> Charan Valavala</a
+      >
+      <nav aria-label="Main navigation">
+        <a href="#work">Work</a><a href="#background">Background</a
+        ><a href="#contact">Contact</a
+        ><a class="resume" href="resume.pdf" target="_blank" rel="noopener"
+          >Resume ↗</a
+        >
       </nav>
     </header>
-
-    <main id="main" tabindex="-1">
-      <section class="hero section-shell" id="top" aria-labelledby="hero-title">
-        <div class="hero-copy" data-reveal>
-          <p class="eyebrow"><span class="eyebrow-line"></span>Computer Science · Hyderabad, India</p>
-          <h1 id="hero-title"><span class="hero-title-line">I’m Charan.</span><span class="hero-title-line">I build software.</span></h1>
-          <p class="hero-summary">
-            I study Computer Science at BITS Pilani, Hyderabad. My recent work covers hybrid document search, financial filing data, and software tools for real workflows.
+    <main id="main">
+      <section class="hero shell" id="top">
+        <div class="hero-copy">
+          <p class="mono eyebrow">Computer Science / Hyderabad, India</p>
+          <h1>Charan Teja<br /><span>Valavala.</span></h1>
+          <p class="intro">
+            I study Computer Science at BITS Pilani, Hyderabad. I build Python
+            applications around document search, financial data, and incident
+            workflows.
           </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#work">View projects <span aria-hidden="true">↓</span></a>
-            <a class="button button-quiet" href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume PDF <span aria-hidden="true">↗</span></a>
+          <div class="hero-links">
+            <a class="primary" href="#work">Explore my work ↓</a
+            ><a
+              href="https://github.com/charanvalavala"
+              target="_blank"
+              rel="noopener"
+              >GitHub ↗</a
+            >
           </div>
-          <div class="hero-footnote"><span class="live-dot" aria-hidden="true"></span>B.E. Computer Science · BITS Pilani, Hyderabad</div>
+          <div class="hero-foot">
+            <span class="spark" aria-hidden="true">✳</span> Three projects.
+            Code, walkthroughs, and the measurements behind them.
+          </div>
         </div>
-        <div class="dev-panel" data-reveal data-delay="100" aria-label="Project snapshot">
-          <div class="dev-panel-head">
-            <span class="dev-window-lights" aria-hidden="true"><i></i><i></i><i></i></span>
-            <span>project-snapshot.txt</span>
-            <span class="dev-panel-location">HYDERABAD / IN</span>
+        <div class="preview">
+          <div class="preview-head">
+            <span class="mono">Project preview</span
+            ><span id="preview-count" class="mono">01 / 03</span>
           </div>
-          <div class="dev-panel-body">
-            <p class="dev-panel-label">SELECTED BUILD NOTES</p>
-            <div class="dev-panel-row"><span class="dev-panel-index">01</span><div><strong>Course Copilot</strong><small>hybrid search · Hit@1 0.923</small></div><b>PYTHON</b></div>
-            <div class="dev-panel-row"><span class="dev-panel-index">02</span><div><strong>FormScope</strong><small>40 filing facts checked · 20 issuers</small></div><b>SEC / XBRL</b></div>
-            <div class="dev-panel-row"><span class="dev-panel-index">03</span><div><strong>IncidentPilot</strong><small>read-only tools · human approval</small></div><b>FASTAPI</b></div>
+          <a
+            id="preview-link"
+            href="demos/course-copilot/"
+            aria-label="Open selected project walkthrough"
+            ><img
+              id="preview-image"
+              src="assets/course-copilot.png"
+              alt="Course Copilot source evidence interface"
+              width="1507"
+              height="770"
+            /><span class="preview-open">Open walkthrough ↗</span></a
+          >
+          <div
+            class="preview-tabs"
+            role="group"
+            aria-label="Choose a project preview"
+          >
+            <button data-preview="course-copilot" aria-pressed="true">
+              <span>01</span>Course Copilot</button
+            ><button data-preview="formscope" aria-pressed="false">
+              <span>02</span>FormScope</button
+            ><button data-preview="incidentpilot" aria-pressed="false">
+              <span>03</span>IncidentPilot
+            </button>
           </div>
-          <div class="dev-panel-foot"><span><i aria-hidden="true"></i> BUILDING AND TESTING</span><span>2026 / 27</span></div>
+          <p class="capture-note">
+            Actual product captures from labeled saved examples.
+          </p>
         </div>
-        <a class="scroll-cue" href="#work" aria-label="Scroll to selected work"><span>SCROLL TO EXPLORE</span><i aria-hidden="true">↓</i></a>
       </section>
-
-      <section class="work-section section-shell" id="work" aria-labelledby="work-title">
-        <div class="section-heading" data-reveal>
+      <section id="work" class="shell work">
+        <div class="section-title">
           <div>
-            <p class="eyebrow"><span class="eyebrow-line"></span>Selected work</p>
-            <h2 id="work-title">Selected<br><span>projects.</span></h2>
+            <p class="mono eyebrow">01 / Selected work</p>
+            <h2>What I’ve been building.</h2>
           </div>
-          <p class="section-intro">Applied AI, data extraction, and backend tools. Each project links to its code and a live demo.</p>
+          <p>
+            Start with an instant saved walkthrough.<br />Use the live app for
+            new inputs.
+          </p>
         </div>
-        <p class="work-context"><span>SHIPPED WORK</span> I have also worked on a website and online test platform used by 200+ students and trainees. <a href="#experience">Experience ↓</a></p>
-
-        <div class="project-grid">
-          <article class="project-card project-card-featured" data-reveal>
+        <article class="project" id="course-copilot">
+          <div class="project-top">
+            <span class="mono">01 / Document retrieval</span
+            ><span class="stack">Python / FastAPI / MiniLM / SQLite</span>
+          </div>
+          <div class="project-layout">
+            <a
+              class="capture"
+              href="demos/course-copilot/"
+              aria-label="Open the Course Copilot saved walkthrough"
+              ><img
+                src="assets/course-copilot.png"
+                alt="Course Copilot application showing its actual interface"
+                loading="lazy"
+                width="1507"
+                height="770"
+              /><span
+                >Actual interface · recorded academic sample query
+                <b>Explore ↗</b></span
+              ></a
+            >
             <div class="project-copy">
-              <div class="project-topline"><span>01 / DOCUMENT INTELLIGENCE</span><span class="project-mark" aria-hidden="true">01</span></div>
-              <p class="project-kicker">HYBRID RETRIEVAL · DOCUMENT SEARCH</p>
               <h3>Course Copilot</h3>
-              <p class="project-description">A document assistant that combines dense embeddings with SQLite FTS5 search, fuses the results, and returns file and page evidence. It can abstain when sources do not support an answer; optional local generation uses Ollama.</p>
-              <div class="project-tags" aria-label="Technologies and capabilities">
-                <span>Python</span><span>FastAPI</span><span>Sentence Transformers</span><span>SQLite FTS5</span><span>RRF</span>
+              <p>
+                Find passages across uploaded documents, inspect their sources,
+                and evaluate whether retrieval is doing its job. Generated
+                answers pass an additional support check or fall back to
+                excerpts.
+              </p>
+              <div class="result">
+                <strong>34/36</strong
+                ><span>Passage Hit@1 on a new challenge set</span>
               </div>
-              <div class="project-result">
-                <div class="result-number">0.923 <span>Hit@1</span></div>
-                <div class="result-number">0.962 <span>MRR</span></div>
-                <p>On the same 52-query development set, 2:1 hybrid retrieval reached Hit@1 0.923 versus 0.904 for BM25-only (MRR 0.962 versus 0.946). 14/15 out-of-scope prompts abstained correctly. Labels identify source files across 13 notes.</p>
-              </div>
-              <div class="project-actions">
-                <a class="project-link" href="https://charan-course-copilot.onrender.com" target="_blank" rel="noopener noreferrer">Open live demo <span aria-hidden="true">↗</span></a>
-                <a class="project-link" href="https://github.com/charanvalavala/course-copilot" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a>
-              </div>
-            </div>
-            <div class="project-visual visual-course" aria-hidden="true">
-              <span class="visual-label">CONCEPT ILLUSTRATION</span>
-              <div class="mock-window">
-                <div class="mock-window-bar"><i></i><i></i><i></i><span>COURSE COPILOT / ASK</span></div>
-                <div class="mock-prompt"><span class="prompt-label">QUESTION</span><span>When does the next semester begin?</span><b>↵</b></div>
-                <div class="mock-evidence-label"><span>RETRIEVED EVIDENCE</span><span>RANKED SOURCES</span></div>
-                <div class="mock-evidence evidence-one"><span class="evidence-rank">01</span><span class="evidence-lines"><i></i><i></i><i></i></span><span class="evidence-chip">calendar.pdf · p. 2</span></div>
-                <div class="mock-evidence evidence-two"><span class="evidence-rank">02</span><span class="evidence-lines"><i></i><i></i><i></i></span><span class="evidence-chip">bulletin.pdf · p. 8</span></div>
-                <div class="mock-answer"><span class="answer-check">✓</span><span>Answer grounded in retrieved sources</span><span class="answer-arrow">↗</span></div>
-              </div>
-              <div class="visual-index">RETRIEVE <b>→</b> INSPECT <b>→</b> EVALUATE</div>
-              <span class="visual-orb orb-course"></span>
-            </div>
-          </article>
-
-          <article class="project-card" data-reveal data-delay="80">
-            <div class="project-topline"><span>02 / FINANCIAL DOCUMENTS</span><span class="project-mark" aria-hidden="true">02</span></div>
-            <div class="project-visual visual-formscope" aria-hidden="true">
-              <span class="visual-label">CONCEPT ILLUSTRATION</span>
-              <div class="formscope-screen">
-                <div class="screen-heading"><span>COMPANY SNAPSHOT</span><b>EDGAR / XBRL</b></div>
-                <div class="company-row"><span class="company-avatar">A</span><span class="company-name">Company facts<small>Public filing data</small></span><span class="company-live"><i></i> SOURCE LINKED</span></div>
-                <div class="chart-area"><div class="chart-y"><i></i><i></i><i></i></div><div class="chart-grid"><i></i><i></i><i></i></div><div class="chart-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><div class="chart-years"><span>FY</span><span>FY</span><span>FY</span><span>FY</span><span>FY</span><span>FY</span><span>FY</span></div></div>
-                <div class="filing-row"><span class="filing-dot"></span><span>Annual filing · primary source</span><b>↗</b></div>
-              </div>
-              <span class="visual-index">RAW FACTS <b>→</b> VISIBLE FORMULAS</span>
-              <span class="visual-orb orb-formscope"></span>
-            </div>
-            <div class="project-copy">
-              <p class="project-kicker">SEC EDGAR · XBRL · SOURCE-LINKED</p>
-              <h3>FormScope</h3>
-              <p class="project-description">An SEC filings explorer that turns reported company facts into annual trends, shows the formulas behind derived metrics, and ranks passages from a company’s latest 10-K with links back to EDGAR.</p>
-              <div class="project-tags"><span>Python</span><span>FastAPI</span><span>XBRL</span><span>SEC EDGAR</span></div>
-              <div class="project-result">
-                <div class="result-number">40/40 <span>facts matched</span></div>
-                <div class="result-number">20 <span>issuers</span></div>
-                <p>Annual revenue and net income matched inline XBRL values from 20 pinned 10-K filings against FormScope’s Company Facts extraction.</p>
-              </div>
-              <div class="project-actions">
-                <a class="project-link" href="https://charan-formscope.onrender.com" target="_blank" rel="noopener noreferrer">Open live demo <span aria-hidden="true">↗</span></a>
-                <a class="project-link" href="https://github.com/charanvalavala/formscope" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a>
+              <p class="scope">
+                36 answerable questions in 12 fictional handbooks; 8/8
+                out-of-scope prompts abstained. Small, manually authored
+                evaluation.
+              </p>
+              <div class="project-links">
+                <a class="primary" href="demos/course-copilot/"
+                  >Try saved demo ↗</a
+                ><a
+                  href="https://charan-course-copilot.onrender.com"
+                  target="_blank"
+                  rel="noopener"
+                  >Live app ↗</a
+                ><a
+                  href="https://github.com/charanvalavala/course-copilot"
+                  target="_blank"
+                  rel="noopener"
+                  >Code ↗</a
+                >
               </div>
             </div>
-          </article>
-
-          <article class="project-card" data-reveal data-delay="160">
-            <div class="project-topline"><span>03 / INCIDENT WORKFLOWS</span><span class="project-mark" aria-hidden="true">03</span></div>
-            <div class="project-visual visual-incident" aria-hidden="true">
-              <span class="visual-label">CONCEPT ILLUSTRATION</span>
-              <div class="incident-screen">
-                <div class="incident-heading"><span>INCIDENT INVESTIGATION</span><span class="incident-state">SIMULATION</span></div>
-                <div class="incident-step step-done"><b>01</b><span class="step-icon">✓</span><span>Read service logs<small>Evidence captured</small></span><i>READ ONLY</i></div>
-                <div class="incident-step step-done"><b>02</b><span class="step-icon">✓</span><span>Inspect metrics<small>Evidence captured</small></span><i>READ ONLY</i></div>
-                <div class="incident-step step-current"><b>03</b><span class="step-icon">◇</span><span>Review proposed action<small>Waiting for human decision</small></span><i>APPROVAL</i></div>
-                <div class="approval-row"><span>Simulated action</span><span class="approval-button">Approve or reject</span></div>
-              </div>
-              <span class="visual-index">OBSERVE <b>→</b> TRACE <b>→</b> REVIEW</span>
-              <span class="visual-orb orb-incident"></span>
-            </div>
-            <div class="project-copy">
-              <p class="project-kicker">STATEFUL SIMULATOR · HUMAN APPROVAL</p>
-              <h3>IncidentPilot</h3>
-              <p class="project-description">A bounded incident-triage workflow that investigates seeded scenarios through read-only tools, stores a replayable SQLite event trace, and requires a human decision before recording a simulated action. It includes a 20-case Ollama evaluation harness; model benchmarks are not published yet.</p>
-              <div class="project-tags"><span>Python</span><span>FastAPI</span><span>SQLite</span><span>Ollama optional</span></div>
-              <div class="project-actions">
-                <a class="project-link" href="https://charan-incidentpilot.onrender.com" target="_blank" rel="noopener noreferrer">Open live demo <span aria-hidden="true">↗</span></a>
-                <a class="project-link" href="https://github.com/charanvalavala/incidentpilot" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a>
-              </div>
-            </div>
-          </article>
-        </div>
-        <p class="work-note"><span aria-hidden="true">✳</span> Live demos are hosted on Render’s free tier. Services sleep after inactivity, so first requests can take about 50 seconds. Course Copilot uses public BITS academic documents in its sample corpus and is not an official BITS service.</p>
-      </section>
-
-      <section class="toolkit-section section-shell" id="about" aria-labelledby="about-title">
-        <div class="toolkit-heading" data-reveal>
-          <p class="eyebrow"><span class="eyebrow-line"></span>About and toolkit</p>
-          <h2 id="about-title">What I use<br><span>to build.</span></h2>
-          <p>Computer Science undergraduate at BITS Pilani, Hyderabad Campus. I work across programming, data analysis, and software projects.</p>
-        </div>
-        <div class="toolkit-list" data-reveal data-delay="80">
-          <div class="toolkit-row"><strong>Programming</strong><p>Python, C, C++, Java, JavaScript, SQL</p></div>
-          <div class="toolkit-row"><strong>Data and ML</strong><p>NumPy, Pandas, Matplotlib, scikit-learn, OpenCV</p></div>
-          <div class="toolkit-row"><strong>Software</strong><p>FastAPI, MongoDB, SQLite, Git, Docker</p></div>
-          <div class="toolkit-row"><strong>Coursework</strong><p>Artificial Intelligence, Machine Learning, Reinforcement Learning, Data Science, Data Structures and Algorithms, Database Systems, Object-Oriented Programming</p></div>
-        </div>
-      </section>
-
-      <section class="experience-section section-shell" id="experience" aria-labelledby="experience-title">
-        <div class="experience-heading" data-reveal>
-          <p class="eyebrow"><span class="eyebrow-line"></span>Experience</p>
-          <h2 id="experience-title">Work and<br><span>early ventures.</span></h2>
-        </div>
-        <div class="experience-stack" data-reveal data-delay="80">
-          <article class="experience-card">
-            <div class="experience-meta"><span>MAY - JULY 2024</span><span>200+ STUDENTS AND TRAINEES</span></div>
-            <div class="experience-main"><div><p class="experience-role">Web Development Intern</p><h3>MDDTI SBC</h3></div></div>
-            <p class="experience-description">Helped build the organization website and online test platform. Worked on HTML and CSS frontend pages and MongoDB-backed features used by more than 200 students and trainees.</p>
-            <div class="project-tags"><span>HTML</span><span>CSS</span><span>MongoDB</span></div>
-          </article>
-          <article class="experience-card">
-            <div class="experience-meta"><span>FEBRUARY - MAY 2026</span><span>EARLY STAGE</span></div>
-            <div class="experience-main"><div><p class="experience-role">Founder · Concept-stage venture</p><h3>DataForge</h3></div></div>
-            <p class="experience-description">Started an early-stage concept focused on AI infrastructure and data centers. Developed the initial direction with mentor guidance while exploring early funding conversations.</p>
-            <div class="project-tags"><span>AI infrastructure</span><span>Data centers</span><span>Venture building</span></div>
-          </article>
-        </div>
-      </section>
-
-      <section class="academic-section section-shell" aria-labelledby="academic-title">
-        <div class="academic-heading" data-reveal>
-          <p class="eyebrow"><span class="eyebrow-line"></span>Coursework projects</p>
-          <h2 id="academic-title">Earlier work</h2>
-        </div>
-        <div class="academic-list" data-reveal data-delay="80">
-          <details class="academic-item">
-            <summary><span>Diabetic Retinopathy Detection</span><span>Open details</span></summary>
-            <p>Built SVM classifiers for retinal fundus images using color and texture features with OpenCV and scikit-learn; evaluated accuracy, precision, recall, and sensitivity.</p>
-          </details>
-          <details class="academic-item">
-            <summary><span>Deep Reinforcement Learning for Object Tracking</span><span>Open details</span></summary>
-            <p>Built a stochastic grid environment with thermal states and teleportation, then compared on-policy and off-policy Monte Carlo control and reviewed convergence.</p>
-          </details>
-        </div>
-      </section>
-
-      <section class="contact-section section-shell" id="contact" aria-labelledby="contact-title">
-        <div class="contact-orbit" aria-hidden="true"><span></span><span></span><span></span></div>
-        <div class="contact-content" data-reveal>
-          <p class="eyebrow"><span class="eyebrow-line"></span>Get in touch</p>
-          <h2 id="contact-title">Get in touch.</h2>
-          <p>Email me about software engineering, applied AI, or data-focused roles.</p>
-          <div class="contact-actions">
-            <a class="button button-primary" href="https://github.com/charanvalavala" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
-            <a class="button button-outline" href="https://www.linkedin.com/in/valavala-charan-teja-b02815251/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
-            <a class="button button-outline" href="mailto:f20220059@hyderabad.bits-pilani.ac.in">Email <span aria-hidden="true">↗</span></a>
           </div>
+          <details class="case-study">
+            <summary>
+              Build notes
+              <span>Decisions, architecture &amp; evaluation <b>+</b></span>
+            </summary>
+            <div class="case-grid">
+              <div>
+                <h4>A decision I made</h4>
+                <p>
+                  Kept both lexical and semantic retrieval, then measured each
+                  against the same passage labels. The original development set
+                  and the newer challenge are reported separately.
+                </p>
+                <h4>How it works</h4>
+                <p>
+                  PDF/TXT ingestion → overlapping chunks → BM25 + MiniLM → rank
+                  fusion → evidence → optional answer support gate.
+                </p>
+              </div>
+              <div>
+                <h4>What the evaluation showed</h4>
+                <p>
+                  The NLI gate accepted 7/12 small-model answers after source
+                  attribution. Rejected outputs become excerpts. Automated
+                  support scores can still be wrong. Full retrieval remains an
+                  in-memory scan.
+                </p>
+                <p>
+                  Lexical 31/36 · Dense 33/36 · Hybrid 34/36. Hybrid MRR 0.972.
+                </p>
+                <a
+                  href="https://github.com/charanvalavala/course-copilot#readme"
+                  target="_blank"
+                  rel="noopener"
+                  >Read the full methodology ↗</a
+                >
+              </div>
+            </div>
+          </details>
+        </article>
+        <article class="project" id="formscope">
+          <div class="project-top">
+            <span class="mono">02 / Financial data + semantic search</span
+            ><span class="stack">Python / FastAPI / ONNX / XBRL</span>
+          </div>
+          <div class="project-layout">
+            <a
+              class="capture"
+              href="demos/formscope/"
+              aria-label="Open the FormScope saved walkthrough"
+              ><img
+                src="assets/formscope.png"
+                alt="FormScope application showing its actual interface"
+                loading="lazy"
+                width="1507"
+                height="770"
+              /><span
+                >Actual interface · historical Apple SEC snapshot
+                <b>Explore ↗</b></span
+              ></a
+            >
+            <div class="project-copy">
+              <h3>FormScope</h3>
+              <p>
+                Compare reported financials and search annual filings by
+                meaning. Every ratio keeps its reporting period, and source
+                filings remain available for inspection.
+              </p>
+              <div class="result">
+                <strong>10 issuers</strong
+                ><span>In the filing-search evaluation</span>
+              </div>
+              <p class="scope">
+                30 questions over 20 cropped filing excerpts selected from
+                lexical results. The selection biases this small benchmark.
+              </p>
+              <div class="project-links">
+                <a class="primary" href="demos/formscope/">Try saved demo ↗</a
+                ><a
+                  href="https://charan-formscope.onrender.com"
+                  target="_blank"
+                  rel="noopener"
+                  >Live app ↗</a
+                ><a
+                  href="https://github.com/charanvalavala/formscope"
+                  target="_blank"
+                  rel="noopener"
+                  >Code ↗</a
+                >
+              </div>
+            </div>
+          </div>
+          <details class="case-study">
+            <summary>
+              Build notes
+              <span>Decisions, architecture &amp; evaluation <b>+</b></span>
+            </summary>
+            <div class="case-grid">
+              <div>
+                <h4>A decision I made</h4>
+                <p>
+                  Added quantized MiniLM inference so semantic search can run on
+                  a CPU without a PyTorch service. Exact period and unit
+                  matching prevents incompatible facts from becoming a margin.
+                </p>
+                <h4>How it works</h4>
+                <p>
+                  SEC facts → period validation → comparable ratios + charts.
+                  Filing text → lexical + ONNX semantic retrieval → rank fusion
+                  → original excerpts.
+                </p>
+              </div>
+              <div>
+                <h4>What the evaluation showed</h4>
+                <p>
+                  Hybrid found the labeled passage first on 30/30 curated
+                  questions, versus 27/30 lexical and 28/30 semantic. This does
+                  not establish full-filing accuracy. SEC access can fail; saved
+                  samples stay available.
+                </p>
+                <p>
+                  Original pinned financial snapshot: 40/40 revenue and
+                  net-income facts matched across 20 issuer filings. Not
+                  refreshed in this upgrade.
+                </p>
+                <a
+                  href="https://github.com/charanvalavala/formscope#readme"
+                  target="_blank"
+                  rel="noopener"
+                  >Read the full methodology ↗</a
+                >
+              </div>
+            </div>
+          </details>
+        </article>
+        <article class="project" id="incidentpilot">
+          <div class="project-top">
+            <span class="mono">03 / Applied ML + incident workflows</span
+            ><span class="stack">Python / scikit-learn / FastAPI / SQLite</span>
+          </div>
+          <div class="project-layout">
+            <a
+              class="capture"
+              href="demos/incidentpilot/"
+              aria-label="Open the IncidentPilot saved walkthrough"
+              ><img
+                src="assets/incidentpilot.png"
+                alt="IncidentPilot application showing its actual interface"
+                loading="lazy"
+                width="1507"
+                height="770"
+              /><span
+                >Actual interface · recorded classifier investigation
+                <b>Explore ↗</b></span
+              ></a
+            >
+            <div class="project-copy">
+              <h3>IncidentPilot</h3>
+              <p>
+                Classify a simulated incident from logs and metrics, trace the
+                investigation, and review an evidence-checked response before
+                recording a decision.
+              </p>
+              <div class="result">
+                <strong>8 cases</strong
+                ><span>In the separate synthetic stress set</span>
+              </div>
+              <p class="scope">
+                Classifier 8/8; local Qwen scoring 4/8. Twenty synthetic
+                training cases and four predefined causes limit what these
+                scores establish.
+              </p>
+              <div class="project-links">
+                <a class="primary" href="demos/incidentpilot/"
+                  >Try saved demo ↗</a
+                ><a
+                  href="https://charan-incidentpilot.onrender.com"
+                  target="_blank"
+                  rel="noopener"
+                  >Live app ↗</a
+                ><a
+                  href="https://github.com/charanvalavala/incidentpilot"
+                  target="_blank"
+                  rel="noopener"
+                  >Code ↗</a
+                >
+              </div>
+            </div>
+          </div>
+          <details class="case-study">
+            <summary>
+              Build notes
+              <span>Decisions, architecture &amp; evaluation <b>+</b></span>
+            </summary>
+            <div class="case-grid">
+              <div>
+                <h4>A decision I made</h4>
+                <p>
+                  Compared a small language model with a supervised classifier.
+                  The classifier is the default CPU path; conflicting or
+                  insufficient evidence produces escalation, not a hidden
+                  scenario action.
+                </p>
+                <h4>How it works</h4>
+                <p>
+                  Read tools → model diagnosis → evidence consistency check →
+                  review gate → versioned SQLite trace. Optional LLM planning
+                  gathers more evidence when necessary.
+                </p>
+              </div>
+              <div>
+                <h4>What the evaluation showed</h4>
+                <p>
+                  The small Qwen model failed unconstrained JSON diagnosis, then
+                  reached 50% with constrained candidate scoring. The trained
+                  classifier performed better on eight new cases. Neither score
+                  demonstrates real-world SRE reliability.
+                </p>
+                <p>
+                  Model reports retain the failed baseline, diagnosis coverage,
+                  reference validity, fallback rates and case-level outputs.
+                </p>
+                <a
+                  href="https://github.com/charanvalavala/incidentpilot#readme"
+                  target="_blank"
+                  rel="noopener"
+                  >Read the full methodology ↗</a
+                >
+              </div>
+            </div>
+          </details>
+        </article>
+        <p class="hosting-note">
+          Live apps run on Render and can take time to wake. Saved demos load
+          immediately on this site and clearly show recorded outputs. Source
+          code, setup steps, and evaluation reports are in each repository.
+        </p>
+      </section>
+      <section id="background" class="shell background">
+        <div class="section-title">
+          <div>
+            <p class="mono eyebrow">02 / Background</p>
+            <h2>A little more context.</h2>
+          </div>
+        </div>
+        <div class="background-grid">
+          <div>
+            <article class="experience">
+              <span class="mono">May — July 2024</span>
+              <h3>MDDTI SBC</h3>
+              <p class="role">Web Development Intern</p>
+              <p>
+                Contributed HTML/CSS frontend pages and MongoDB-backed features
+                to the website and online test platform used by 200+ students
+                and trainees.
+              </p>
+            </article>
+            <article class="experience">
+              <span class="mono">February — May 2026</span>
+              <h3>DataForge</h3>
+              <p class="role">Founder / concept stage</p>
+              <p>
+                Explored an AI infrastructure and data center venture with
+                mentor guidance and early funding discussions.
+              </p>
+            </article>
+          </div>
+          <div>
+            <div class="toolkit">
+              <h3>Tools I work with</h3>
+              <dl>
+                <dt>Programming</dt>
+                <dd>Python, SQL, C, C++, Java, JavaScript, HTML, CSS</dd>
+                <dt>Data &amp; ML</dt>
+                <dd>
+                  NumPy, Pandas, Matplotlib, scikit-learn, OpenCV, Sentence
+                  Transformers, ONNX
+                </dd>
+                <dt>Software</dt>
+                <dd>
+                  FastAPI, MongoDB, SQLite, Git, Docker, pytest, GitHub Actions
+                </dd>
+              </dl>
+            </div>
+            <div class="earlier">
+              <h3>Earlier coursework projects</h3>
+              <details>
+                <summary>Diabetic Retinopathy Detection <b>+</b></summary>
+                <p>
+                  Extracted color and texture features from retinal fundus
+                  images and trained SVM classifiers with OpenCV and
+                  scikit-learn. Evaluated accuracy, precision, recall and
+                  sensitivity; no unverified score is listed here.
+                </p>
+              </details>
+              <details>
+                <summary>
+                  Reinforcement Learning for Object Tracking <b>+</b>
+                </summary>
+                <p>
+                  Built a stochastic grid environment with terminal states and
+                  teleportation. Compared on-policy and off-policy Monte Carlo
+                  control through convergence and policy behavior.
+                </p>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="shell contact">
+        <div>
+          <p class="mono eyebrow">03 / Contact</p>
+          <h2>Let’s talk.</h2>
+          <p>
+            For software engineering, applied AI, or data-focused opportunities.
+          </p>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:f20220059@hyderabad.bits-pilani.ac.in"
+            >Email <span>↗</span></a
+          ><a
+            href="https://www.linkedin.com/in/valavala-charan-teja-b02815251/"
+            target="_blank"
+            rel="noopener"
+            >LinkedIn <span>↗</span></a
+          ><a href="resume.pdf" target="_blank" rel="noopener"
+            >Resume PDF <span>↗</span></a
+          >
         </div>
       </section>
     </main>
-
-    <footer class="site-footer section-shell">
-      <a class="brand brand-footer" href="#top" aria-label="Back to top"><span class="brand-mark" aria-hidden="true">C</span><span>Charan Teja Valavala</span></a>
-      <span>Computer Science · Hyderabad, India</span>
-      <a href="#top">Back to top ↑</a>
+    <footer class="shell">
+      <span>Charan Teja Valavala / BITS Pilani, Hyderabad</span
+      ><a href="#top">Back to top ↑</a>
     </footer>
   </body>
 </html>

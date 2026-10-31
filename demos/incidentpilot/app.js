@@ -1,107 +1,141 @@
-const scenarios = {
-  latency: {
-    name: "API latency after release",
-    summary: "p95 latency rose after a rollout while database saturation stayed normal.",
-    logs: [
-      ["14:05", "ERROR · checkout-api", "Upstream inventory request exceeded 2500 ms timeout"],
-      ["14:06", "WARN · checkout-api", "Retry budget exhausted for inventory client"],
-      ["14:07", "INFO · deploy-controller", "Release checkout-api 8f2c completed at 14:02"]
-    ],
-    metrics: [["checkout API p95", "2140 ms · baseline 180 ms"], ["inventory p95", "1820 ms · baseline 140 ms"], ["database CPU", "49% · baseline 52%"]],
-    diagnosis: "The seeded fixture attributes the checkout delay to a slow inventory dependency after the latest release.",
-    action: "Simulated rollback of checkout-api release 8f2c"
-  },
-  pool: {
-    name: "Payment database pool exhausted",
-    summary: "Payment requests fail while active connections reach the configured pool cap.",
-    logs: [
-      ["09:12", "ERROR · payment-api", "Connection acquire timeout after 3000 ms"],
-      ["09:13", "WARN · payment-api", "Active connection count reached max pool size 80"],
-      ["09:13", "ERROR · payment-api", "Request handler waiting for database connection"]
-    ],
-    metrics: [["active connections", "80 · pool cap 80"], ["pool waiters", "124 requests"], ["API error rate", "22% · baseline 0.4%"]],
-    diagnosis: "The seeded fixture attributes payment failures to a saturated database connection pool.",
-    action: "Simulated payment queue backpressure"
+import {
+  $,
+  safe,
+  request,
+  sample,
+  busy,
+  notify,
+  jsonPost,
+  savedOnly,
+} from "./ui.js";
+let snapshot = savedOnly,
+  version = 0,
+  activeIncident = null;
+function render(incident, trace = []) {
+  activeIncident = incident;
+  const state = incident.state,
+    refs = new Set(state.diagnosis.evidence_refs),
+    mode = state.reasoning.diagnostician;
+  $("status").textContent = incident.status.replaceAll("_", " ");
+  $("investigation").innerHTML =
+    `<div class="panel result"><div class="panel-head"><h2>${safe(state.scenario_name)}</h2><span class="mono quiet">v${incident.version}</span></div><div class="notice"><span class="badge">${safe(mode)}</span><h3>${safe(state.diagnosis.summary)}</h3><span class="mono">${safe(state.diagnosis.root_cause)}</span></div><div class="timeline">${trace.map((event, i) => `<div class="step"><b>${i + 1}</b><p>${safe(event.event_type.replaceAll(".", " / ").replaceAll("_", " "))}<br><span class="quiet mono">${safe(event.created_at)}</span></p></div>`).join("")}</div><div class="evidence-grid">${state.evidence.map((tool) => `<article class="evidence"><h3>${safe(tool.tool.replaceAll("_", " "))}</h3>${tool.items.map((item) => `<p>${refs.has(item.id) ? '<span class="badge">Cited evidence</span><br>' : ""}<span class="mono quiet">${safe(item.id)}</span><br>${safe(item.message || item.step || `${item.name}: ${item.current} ${item.unit} (baseline ${item.baseline})`)}</p>`).join("")}</article>`).join("")}</div><div class="decision"><span class="eyebrow">${state.proposal.abstained ? "Escalation" : "Proposed response"}</span><h3>${safe(state.proposal.action)}</h3><p>${safe(state.proposal.description)}</p>${state.approval ? `<p class="badge">${state.approval.approved ? "Approved" : "Rejected"} · ${safe(state.approval.actor)} (unverified label)</p>` : `<label for="reviewer">Reviewer label (unverified)</label><div class="form-row"><div><input id="reviewer" placeholder="Your name" maxlength="80"></div><button id="approve" class="primary">Approve simulation</button><button id="reject">Reject</button></div>`}<p class="mode-note">${safe(state.proposal.impact)}</p></div><details><summary>Inspect raw event payloads</summary><pre>${safe(JSON.stringify(trace, null, 2))}</pre></details></div>`;
+  if (snapshot) {
+    for (const id of ["reviewer", "approve", "reject"])
+      if ($(id)) $(id).disabled = true;
   }
-};
-
-const selector = document.querySelector("#scenario");
-const summary = document.querySelector("#scenario-summary");
-const signals = document.querySelector("#signals");
-const diagnosis = document.querySelector("#diagnosis");
-const trace = document.querySelector("#trace");
-const decision = document.querySelector("#decision");
-let selected = scenarios.latency;
-let events = [];
-
-function addEvent(message) {
-  const time = new Intl.DateTimeFormat("en", { hour: "2-digit", minute: "2-digit", second: "2-digit" }).format(new Date());
-  events = [...events, [time, message]];
-  renderTrace();
+  for (const [id, approved] of [
+    ["approve", true],
+    ["reject", false],
+  ])
+    $(id)?.addEventListener("click", () =>
+      busy($(id), async () => {
+        if (snapshot)
+          throw new Error(
+            "Saved investigations are read-only. Use the live simulator to record a decision.",
+          );
+        const actor = $("reviewer").value.trim();
+        if (actor.length < 2)
+          throw new Error(
+            "Enter a reviewer label with at least two characters.",
+          );
+        $("approve").disabled = true;
+        $("reject").disabled = true;
+        try {
+          const updated = await request(
+            `/api/incidents/${incident.id}/approval`,
+            { ...jsonPost({ approved, actor }), key: "approval" },
+          );
+          const events = await request(`/api/incidents/${incident.id}/trace`, {
+            key: "trace",
+          });
+          render(updated, events);
+        } catch (error) {
+          $("approve").disabled = false;
+          $("reject").disabled = false;
+          throw error;
+        }
+      }),
+    );
 }
-
-function renderTrace() {
-  trace.replaceChildren();
-  for (const [time, message] of events) {
-    const item = document.createElement("li");
-    const stamp = document.createElement("time");
-    stamp.textContent = time;
-    const text = document.createElement("span");
-    text.textContent = message;
-    item.append(stamp, text);
-    trace.append(item);
+function scenarios(items) {
+  $("scenarios").innerHTML = items
+    .map(
+      (item) =>
+        `<button class="scenario" data-id="${safe(item.id)}"><strong>${safe(item.name)}</strong><span>${safe(item.summary)}</span></button>`,
+    )
+    .join("");
+  for (const button of document.querySelectorAll("[data-id]"))
+    button.addEventListener("click", () => {
+      if (savedOnly) {
+        sample().then((data) => {
+          const record = data.incidents?.[button.dataset.id];
+          if (record) render(record.incident, record.trace);
+        });
+        return;
+      }
+      start(button.dataset.id, button);
+    });
+}
+async function start(id, button) {
+  snapshot = false;
+  const token = ++version;
+  for (const item of document.querySelectorAll(".scenario"))
+    item.classList.toggle("selected", item === button);
+  $("status").textContent = "Investigating";
+  $("investigation").innerHTML =
+    '<div class="panel"><span class="busy-indicator"></span> Gathering evidence…</div>';
+  try {
+    const incident = await request("/api/incidents", {
+      ...jsonPost({ scenario: id }),
+      key: "incident",
+      timeout: 180000,
+    });
+    const trace = await request(`/api/incidents/${incident.id}/trace`, {
+      key: "trace",
+    });
+    if (token === version) render(incident, trace);
+  } catch (error) {
+    if (token === version) {
+      $("status").textContent = "Interrupted";
+      $("investigation").innerHTML =
+        `<div class="panel"><p class="error">${safe(error.message)}</p><button id="retry">Retry investigation</button></div>`;
+      $("retry").addEventListener("click", () => start(id, button));
+    }
   }
 }
-
-function renderScenario(key) {
-  selected = scenarios[key];
-  summary.textContent = selected.summary;
-  diagnosis.textContent = selected.diagnosis;
-  decision.textContent = "No decision recorded.";
-  signals.replaceChildren();
-
-  const logHeading = document.createElement("h3");
-  logHeading.textContent = "Logs";
-  const logs = document.createElement("dl");
-  for (const [time, service, message] of selected.logs) {
-    const row = document.createElement("div");
-    const term = document.createElement("dt");
-    term.textContent = `${time} · ${service}`;
-    const value = document.createElement("dd");
-    value.textContent = message;
-    row.append(term, value);
-    logs.append(row);
-  }
-
-  const metricHeading = document.createElement("h3");
-  metricHeading.textContent = "Metrics";
-  const metrics = document.createElement("dl");
-  for (const [name, value] of selected.metrics) {
-    const row = document.createElement("div");
-    const term = document.createElement("dt");
-    term.textContent = name;
-    const metric = document.createElement("dd");
-    metric.textContent = value;
-    row.append(term, metric);
-    metrics.append(row);
-  }
-
-  signals.append(logHeading, logs, metricHeading, metrics);
-  events = [];
-  addEvent(`Loaded seeded scenario: ${selected.name}`);
-  addEvent("Displayed fixture logs and metrics; no external tools called");
+async function saved() {
+  version++;
+  snapshot = true;
+  const data = await sample();
+  scenarios(data.scenarios);
+  render(data.incident, data.trace);
+  $("benchmark").textContent = JSON.stringify(data.benchmark, null, 2);
+  $("mode").innerHTML =
+    "<strong>Saved investigation</strong> · Recorded sample, not a fresh model run. Approval is disabled in this walkthrough.";
 }
-
-selector.addEventListener("change", () => renderScenario(selector.value));
-
-document.querySelector("#approve").addEventListener("click", () => {
-  decision.textContent = `Approved in this browser only. Recorded: ${selected.action}. No operational system changed.`;
-  addEvent(`Simulated approval recorded: ${selected.action}`);
-});
-
-document.querySelector("#reject").addEventListener("click", () => {
-  decision.textContent = "Rejected in this browser only. No action was recorded or executed.";
-  addEvent("Simulated approval rejected; no action recorded");
-});
-
-renderScenario("latency");
+$("saved").addEventListener("click", () => busy($("saved"), saved));
+$("evaluate").addEventListener("click", () =>
+  busy($("evaluate"), async () => {
+    const data = await sample();
+    const report = snapshot
+      ? data.policy
+      : await request("/api/evaluate", {
+          ...jsonPost({
+            cases: data.scenarios.map((item) => ({ scenario: item.id })),
+          }),
+          key: "eval",
+          timeout: 180000,
+        });
+    $("eval-result").innerHTML =
+      `<pre>${safe(JSON.stringify({ cases: report.cases, read_only_tools_rate: report.read_only_tools_rate, valid_evidence_rate: report.valid_evidence_rate, approval_gate_rate: report.approval_gate_rate, scope: report.scope }, null, 2))}</pre>`;
+  }),
+);
+if (savedOnly) saved().catch((error) => notify(error.message, true));
+else
+  request("/api/scenarios", { key: "scenarios", timeout: 15000 })
+    .then(scenarios)
+    .catch((error) => {
+      $("scenarios").innerHTML =
+        '<p class="error">The live simulator is unavailable. Load the saved investigation above.</p>';
+      notify(error.message, true);
+    });

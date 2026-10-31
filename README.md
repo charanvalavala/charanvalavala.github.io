@@ -1,20 +1,19 @@
-# Charan Teja Valavala — Portfolio
+# Charan Teja Valavala / Selected work
 
-A static portfolio for Charan Teja Valavala, a computer science student at BITS Pilani, Hyderabad Campus. It highlights three original applied AI engineering projects, a web development internship, and the principles behind the work.
+Static portfolio deployed through GitHub Pages. No build step is required. Serve this directory with `python -m http.server 8765` and open http://127.0.0.1:8765.
 
-## Preview
+## Content and interaction
 
-Open `index.html` in a browser. The page has no build step or runtime dependency. Google Fonts improve the display typography when online; local system fallbacks remain available offline.
+The project switcher uses actual screenshots captured from the applications, not concept illustrations. Each project has concise context and expandable build notes with architecture, measurements, decisions and limitations. The hero introduces Charan directly. MDDTI SBC and the concept-stage DataForge venture retain their verified scope. CGPA is not published.
 
-Each project has a browser-only walkthrough with fixed sample data. These pages are static previews, not the hosted FastAPI services; use each repository's instructions to run the complete backend app locally or in Docker.
+`demos/course-copilot`, `demos/formscope`, and `demos/incidentpilot` mirror each product's static interface and recorded `sample.json` outputs. The body sets `data-saved=true`: no backend is needed. These are saved walkthroughs, clearly labeled and linked separately from live apps. Course Copilot includes three recorded query results; IncidentPilot includes four recorded investigations; FormScope includes a dated SEC financial snapshot and saved semantic result. Arbitrary new inputs require the live service.
 
-The `resume.pdf` file is the current one-page resume linked from the site navigation.
+`assets/*.png` are actual desktop product captures from the labeled saved data. The screenshot state is illustrative of the working interface, not evidence of fresh inference at page-view time.
 
-## Design and accessibility
+## Accessibility and maintenance
 
-- Responsive layout for wide screens, tablets, and phones.
-- Semantic section headings, a skip link, keyboard-visible focus, and descriptive external-link behavior.
-- Short, one-shot hero and viewport motion, quiet card transitions, and a `prefers-reduced-motion` fallback.
-- CSS and HTML illustrations keep the page lightweight and avoid unverified screenshots or product claims.
-- Static walkthrough pages are labeled and link to their sample sources and full repositories.
-- Course Copilot is the only BITS-specific project context; its documentation identifies the academic sample corpus as a non-official use case.
+Responsive layout, keyboard-operable preview buttons, visible focus, native details disclosures, descriptive image text, and reduced-motion styles. Content remains visible without JavaScript; no reveal effect hides it permanently. Fonts have local fallbacks. Frontend source is formatted and unbundled.
+
+Metrics come from checked-in reports in the project repositories. The 48-query Course Copilot challenge is fictional and manually authored; the FormScope search set is small and selected from lexical excerpts; IncidentPilot's training and stress cases are synthetic. None establish general production accuracy.
+
+The resume at `resume.pdf` remains separately available. Repository pushes trigger the existing GitHub Pages deployment.

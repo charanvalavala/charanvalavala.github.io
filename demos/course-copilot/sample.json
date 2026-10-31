@@ -1,0 +1,301 @@
+{
+  "captured_at": "2026-10-31",
+  "question": "When does Semester II registration begin?",
+  "result": {
+    "answer": "Source excerpts (no generated answer):\n\n[1] # Semester II start dates in 2025-26 In the official BITS Pilani academic calendar for 2025-26, Semester II student registration is listed for January 5, 2026. Semester II classwork is listed as beginning January 6, 2026. Confirm campus and programme-specific details in the official calendar.\n\n[2] # Semester II comprehensive examinations The 2025-26 academic calendar lists the Semester II comprehensive examination period as beginning May 2, 2026 and ending May 16, 2026. The calendar lists the second semester end date as May 19, 2026.\n\n[3] # Semester II mid-semester examinations The official 2025-26 BITS Pilani academic calendar lists Semester II mid-semester examinations from March 9 through March 14, 2026, with classwork suspended during that period. Use the calendar for the relevant campus and programme before planning around these dates.",
+    "mode": "evidence-only",
+    "fallback_reason": "model_unavailable",
+    "evidence": [
+      {
+        "chunk_id": 12,
+        "source": "semester-two-start.md",
+        "url": "https://academic.bits-pilani.ac.in/Downloads/New_Admissions_Data/Academic_Calendar_AY_2025_2026_26_August_2025.pdf",
+        "page": null,
+        "text": "# Semester II start dates in 2025-26 In the official BITS Pilani academic calendar for 2025-26, Semester II student registration is listed for January 5, 2026. Semester II classwork is listed as beginning January 6, 2026. Confirm campus and programme-specific details in the official calendar.",
+        "dense_score": 0.7143105268478394,
+        "rrf_score": 0.04918032786885246
+      },
+      {
+        "chunk_id": 2,
+        "source": "comprehensive-exams.md",
+        "url": "https://academic.bits-pilani.ac.in/Downloads/New_Admissions_Data/Academic_Calendar_AY_2025_2026_26_August_2025.pdf",
+        "page": null,
+        "text": "# Semester II comprehensive examinations The 2025-26 academic calendar lists the Semester II comprehensive examination period as beginning May 2, 2026 and ending May 16, 2026. The calendar lists the second semester end date as May 19, 2026.",
+        "dense_score": 0.6833117008209229,
+        "rrf_score": 0.016129032258064516
+      },
+      {
+        "chunk_id": 7,
+        "source": "midsemester-exams.md",
+        "url": "https://academic.bits-pilani.ac.in/Downloads/New_Admissions_Data/Academic_Calendar_AY_2025_2026_26_August_2025.pdf",
+        "page": null,
+        "text": "# Semester II mid-semester examinations The official 2025-26 BITS Pilani academic calendar lists Semester II mid-semester examinations from March 9 through March 14, 2026, with classwork suspended during that period. Use the calendar for the relevant campus and programme before planning around these dates.",
+        "dense_score": 0.606395423412323,
+        "rrf_score": 0.015873015873015872
+      },
+      {
+        "chunk_id": 11,
+        "source": "regular-semesters.md",
+        "url": "https://academic.bits-pilani.ac.in/Downloads/Bulletin_2025-26.pdf",
+        "page": null,
+        "text": "# Regular semesters and summer term The Academic Bulletin 2025-26 describes two regular semesters in the academic calendar. A summer term is not part of the regular academic calendar unless a specific programme provision says otherwise. Check the relevant programme section for exceptions.",
+        "dense_score": 0.5543323755264282,
+        "rrf_score": 0.015625
+      },
+      {
+        "chunk_id": 13,
+        "source": "summer-term-and-practice-school.md",
+        "url": "https://academic.bits-pilani.ac.in/Downloads/New_Admissions_Data/Academic_Calendar_AY_2025_2026_26_August_2025.pdf",
+        "page": null,
+        "text": "# Summer term and Practice School dates The 2025-26 calendar lists May 21, 2026 as the start of summer vacation and the summer term. Practice School I begins May 25, 2026. Practice School II ends June 19, 2026, and Practice School I ends July 18, 2026. Refer to the calendar for programme-specific variations.",
+        "dense_score": 0.5451494455337524,
+        "rrf_score": 0.015384615384615385
+      }
+    ]
+  },
+  "documents": [
+    {
+      "id": 1,
+      "name": "academic-divisions.md",
+      "url": "https://academic.bits-pilani.ac.in/Index.aspx",
+      "created_at": "2026-10-31 16:50:24",
+      "chunks": 1
+    },
+    {
+      "id": 2,
+      "name": "comprehensive-exams.md",
+      "url": "https://academic.bits-pilani.ac.in/Downloads/New_Admissions_Data/Academic_Calendar_AY_2025_2026_26_August_2025.pdf",
+      "created_at": "2026-10-31 16:50:24",
+      "chunks": 1
+    },
+    {
+      "id": 3,
+      "name": "course-offerings.md",
+      "url": "https://academic.bits-pilani.ac.in/Downloads/Bulletin_2025-26.pdf",
+      "created_at": "2026-10-31 16:50:24",
+      "chunks": 1
+    },
+    {
+      "id": 4,
+      "name": "course-withdrawal.md",
+      "url": "https://academic.bits-pilani.ac.in/Downloads/New_Admissions_Data/Academic_Calendar_AY_2025_2026_26_August_2025.pdf",
+      "created_at": "2026-10-31 16:50:24",
+      "chunks": 1
+    },
+    {
+      "id": 5,
+      "name": "elective-planning.md",
+      "url": "https://academic.bits-pilani.ac.in/Downloads/Bulletin_2025-26.pdf",
+      "created_at": "2026-10-31 16:50:24",
+      "chunks": 1
+    },
+    {
+      "id": 6,
+      "name": "hyderabad-campus-holiday.md",
+      "url": "https://academic.bits-pilani.ac.in/Downloads/New_Admissions_Data/Academic_Calendar_AY_2025_2026_26_August_2025.pdf",
+      "created_at": "2026-10-31 16:50:24",
+      "chunks": 1
+    },
+    {
+      "id": 7,
+      "name": "midsemester-exams.md",
+      "url": "https://academic.bits-pilani.ac.in/Downloads/New_Admissions_Data/Academic_Calendar_AY_2025_2026_26_August_2025.pdf",
+      "created_at": "2026-10-31 16:50:24",
+      "chunks": 1
+    },
+    {
+      "id": 8,
+      "name": "official-academic-documents.md",
+      "url": "https://academic.bits-pilani.ac.in/Institute_Important_Documents.aspx",
+      "created_at": "2026-10-31 16:50:24",
+      "chunks": 1
+    },
+    {
+      "id": 9,
+      "name": "prerequisites-and-sequences.md",
+      "url": "https://academic.bits-pilani.ac.in/Downloads/Bulletin_2025-26.pdf",
+      "created_at": "2026-10-31 16:50:24",
+      "chunks": 1
+    },
+    {
+      "id": 10,
+      "name": "registration-permission.md",
+      "url": "https://academic.bits-pilani.ac.in/Downloads/Bulletin_2025-26.pdf",
+      "created_at": "2026-10-31 16:50:24",
+      "chunks": 1
+    },
+    {
+      "id": 11,
+      "name": "regular-semesters.md",
+      "url": "https://academic.bits-pilani.ac.in/Downloads/Bulletin_2025-26.pdf",
+      "created_at": "2026-10-31 16:50:24",
+      "chunks": 1
+    },
+    {
+      "id": 12,
+      "name": "semester-two-start.md",
+      "url": "https://academic.bits-pilani.ac.in/Downloads/New_Admissions_Data/Academic_Calendar_AY_2025_2026_26_August_2025.pdf",
+      "created_at": "2026-10-31 16:50:24",
+      "chunks": 1
+    },
+    {
+      "id": 13,
+      "name": "summer-term-and-practice-school.md",
+      "url": "https://academic.bits-pilani.ac.in/Downloads/New_Admissions_Data/Academic_Calendar_AY_2025_2026_26_August_2025.pdf",
+      "created_at": "2026-10-31 16:50:24",
+      "chunks": 1
+    }
+  ],
+  "challenge": {
+    "lexical": {
+      "hit1": 0.8611111111111112,
+      "mrr": 0.8611111111111112,
+      "correct_abstentions": 8,
+      "negative_queries": 8,
+      "p50_ms": 3.0,
+      "p95_ms": 4.43
+    },
+    "dense": {
+      "hit1": 0.9166666666666666,
+      "mrr": 0.9444444444444444,
+      "correct_abstentions": 8,
+      "negative_queries": 8,
+      "p50_ms": 34.97,
+      "p95_ms": 57.76
+    },
+    "hybrid": {
+      "hit1": 0.9444444444444444,
+      "mrr": 0.9722222222222222,
+      "correct_abstentions": 8,
+      "negative_queries": 8,
+      "p50_ms": 60.8,
+      "p95_ms": 88.44
+    }
+  },
+  "evaluation": {
+    "answerable_queries": 52,
+    "hit_rate_at_1": 0.9230769230769231,
+    "mean_reciprocal_rank": 0.962,
+    "unanswerable_abstention_accuracy": 0.9333333333333333
+  },
+  "examples": [
+    {
+      "question": "When does Semester II registration begin?",
+      "result": {
+        "answer": "Source excerpts (no generated answer):\n\n[1] # Semester II start dates in 2025-26 In the official BITS Pilani academic calendar for 2025-26, Semester II student registration is listed for January 5, 2026. Semester II classwork is listed as beginning January 6, 2026. Confirm campus and programme-specific details in the official calendar.\n\n[2] # Semester II comprehensive examinations The 2025-26 academic calendar lists the Semester II comprehensive examination period as beginning May 2, 2026 and ending May 16, 2026. The calendar lists the second semester end date as May 19, 2026.\n\n[3] # Semester II mid-semester examinations The official 2025-26 BITS Pilani academic calendar lists Semester II mid-semester examinations from March 9 through March 14, 2026, with classwork suspended during that period. Use the calendar for the relevant campus and programme before planning around these dates.",
+        "mode": "evidence-only",
+        "fallback_reason": "model_unavailable",
+        "evidence": [
+          {
+            "chunk_id": 12,
+            "source": "semester-two-start.md",
+            "url": "https://academic.bits-pilani.ac.in/Downloads/New_Admissions_Data/Academic_Calendar_AY_2025_2026_26_August_2025.pdf",
+            "page": null,
+            "text": "# Semester II start dates in 2025-26 In the official BITS Pilani academic calendar for 2025-26, Semester II student registration is listed for January 5, 2026. Semester II classwork is listed as beginning January 6, 2026. Confirm campus and programme-specific details in the official calendar.",
+            "dense_score": 0.7143105268478394,
+            "rrf_score": 0.04918032786885246
+          },
+          {
+            "chunk_id": 2,
+            "source": "comprehensive-exams.md",
+            "url": "https://academic.bits-pilani.ac.in/Downloads/New_Admissions_Data/Academic_Calendar_AY_2025_2026_26_August_2025.pdf",
+            "page": null,
+            "text": "# Semester II comprehensive examinations The 2025-26 academic calendar lists the Semester II comprehensive examination period as beginning May 2, 2026 and ending May 16, 2026. The calendar lists the second semester end date as May 19, 2026.",
+            "dense_score": 0.6833117008209229,
+            "rrf_score": 0.016129032258064516
+          },
+          {
+            "chunk_id": 7,
+            "source": "midsemester-exams.md",
+            "url": "https://academic.bits-pilani.ac.in/Downloads/New_Admissions_Data/Academic_Calendar_AY_2025_2026_26_August_2025.pdf",
+            "page": null,
+            "text": "# Semester II mid-semester examinations The official 2025-26 BITS Pilani academic calendar lists Semester II mid-semester examinations from March 9 through March 14, 2026, with classwork suspended during that period. Use the calendar for the relevant campus and programme before planning around these dates.",
+            "dense_score": 0.606395423412323,
+            "rrf_score": 0.015873015873015872
+          },
+          {
+            "chunk_id": 11,
+            "source": "regular-semesters.md",
+            "url": "https://academic.bits-pilani.ac.in/Downloads/Bulletin_2025-26.pdf",
+            "page": null,
+            "text": "# Regular semesters and summer term The Academic Bulletin 2025-26 describes two regular semesters in the academic calendar. A summer term is not part of the regular academic calendar unless a specific programme provision says otherwise. Check the relevant programme section for exceptions.",
+            "dense_score": 0.5543323755264282,
+            "rrf_score": 0.015625
+          },
+          {
+            "chunk_id": 13,
+            "source": "summer-term-and-practice-school.md",
+            "url": "https://academic.bits-pilani.ac.in/Downloads/New_Admissions_Data/Academic_Calendar_AY_2025_2026_26_August_2025.pdf",
+            "page": null,
+            "text": "# Summer term and Practice School dates The 2025-26 calendar lists May 21, 2026 as the start of summer vacation and the summer term. Practice School I begins May 25, 2026. Practice School II ends June 19, 2026, and Practice School I ends July 18, 2026. Refer to the calendar for programme-specific variations.",
+            "dense_score": 0.5451494455337524,
+            "rrf_score": 0.015384615384615385
+          }
+        ]
+      }
+    },
+    {
+      "question": "Does a bulletin listing guarantee a course will be offered?",
+      "result": {
+        "answer": "Source excerpts (no generated answer):\n\n[1] # How a course gets offered The BITS Pilani Academic Bulletin 2025-26 says course offerings depend on programme progression, facilities, and the decision of the Dean of AUGSD or AGSRD. The term timetable lists courses actually offered and is published at the beginning of the semester. A bulletin listing alone does not confirm that the course will run.\n\n[2] # Course registration permission The Academic Bulletin 2025-26 states that registration in a course requires prior permission under the Academic Regulations. Consult the current regulations for the precise registration rule. The bulletin's general guidance is not a replacement for the full regulations.\n\n[3] # Prerequisites and programme sequences Some courses have prerequisite conditions that must be fulfilled or waived with the required approval. Courses in a programme structure are presented in semesterwise sequence. The bulletin cautions that the absence of a stated restriction does not mean courses may be arbitrarily rearranged.",
+        "mode": "evidence-only",
+        "fallback_reason": "model_unavailable",
+        "evidence": [
+          {
+            "chunk_id": 3,
+            "source": "course-offerings.md",
+            "url": "https://academic.bits-pilani.ac.in/Downloads/Bulletin_2025-26.pdf",
+            "page": null,
+            "text": "# How a course gets offered The BITS Pilani Academic Bulletin 2025-26 says course offerings depend on programme progression, facilities, and the decision of the Dean of AUGSD or AGSRD. The term timetable lists courses actually offered and is published at the beginning of the semester. A bulletin listing alone does not confirm that the course will run.",
+            "dense_score": 0.6195003390312195,
+            "rrf_score": 0.04918032786885246
+          },
+          {
+            "chunk_id": 10,
+            "source": "registration-permission.md",
+            "url": "https://academic.bits-pilani.ac.in/Downloads/Bulletin_2025-26.pdf",
+            "page": null,
+            "text": "# Course registration permission The Academic Bulletin 2025-26 states that registration in a course requires prior permission under the Academic Regulations. Consult the current regulations for the precise registration rule. The bulletin's general guidance is not a replacement for the full regulations.",
+            "dense_score": 0.5393416881561279,
+            "rrf_score": 0.047379032258064516
+          },
+          {
+            "chunk_id": 9,
+            "source": "prerequisites-and-sequences.md",
+            "url": "https://academic.bits-pilani.ac.in/Downloads/Bulletin_2025-26.pdf",
+            "page": null,
+            "text": "# Prerequisites and programme sequences Some courses have prerequisite conditions that must be fulfilled or waived with the required approval. Courses in a programme structure are presented in semesterwise sequence. The bulletin cautions that the absence of a stated restriction does not mean courses may be arbitrarily rearranged.",
+            "dense_score": 0.5309184193611145,
+            "rrf_score": 0.04664224664224664
+          },
+          {
+            "chunk_id": 5,
+            "source": "elective-planning.md",
+            "url": "https://academic.bits-pilani.ac.in/Downloads/Bulletin_2025-26.pdf",
+            "page": null,
+            "text": "# Planning electives The Academic Bulletin 2025-26 explains that electives can be selected only from courses available in the semester timetable. Previous timetables may help with advance planning, but they do not guarantee a future offering. Check the current timetable before relying on an elective plan.",
+            "dense_score": null,
+            "rrf_score": 0.03225806451612903
+          },
+          {
+            "chunk_id": 8,
+            "source": "official-academic-documents.md",
+            "url": "https://academic.bits-pilani.ac.in/Institute_Important_Documents.aspx",
+            "page": null,
+            "text": "# Where to find official academic documents The Institute Important Documents page links to Academic Regulations, the timetable, and institute bulletins. It lists the 2025-26 bulletin and earlier annual bulletins. Use Academic Regulations for binding rules and the current semester timetable to see which courses are offered.",
+            "dense_score": null,
+            "rrf_score": 0.031746031746031744
+          }
+        ]
+      }
+    },
+    {
+      "question": "What is the weather forecast tomorrow?",
+      "result": {
+        "answer": "I could not find supporting evidence in the indexed documents.",
+        "mode": "abstain",
+        "evidence": []
+      }
+    }
+  ]
+}

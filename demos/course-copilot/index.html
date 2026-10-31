@@ -1,44 +1,182 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="A browser-only sample walkthrough of Course Copilot's source-grounded document retrieval experience.">
-    <title>Course Copilot — Sample Walkthrough</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../demo.css">
-    <script src="app.js" defer></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#12171b" />
+    <title>Course Copilot | Charan Teja Valavala</title>
+    <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body>
-    <div class="demo-wrap">
-      <header class="demo-header">
-        <a class="demo-brand" href="../../">Charan Teja Valavala</a>
-        <a class="demo-back" href="../../#work">← All projects</a>
+  <body data-saved="true" style="--accent: #f6b778">
+    <div class="shell">
+      <header>
+        <a href="#main" class="brand"
+          ><span class="logo">CC</span>Course Copilot</a
+        >
+        <nav>
+          <a class="optional" href="https://charanvalavala.github.io"
+            >Portfolio</a
+          ><a
+            href="https://charan-course-copilot.onrender.com"
+            target="_blank"
+            rel="noopener"
+            >Live app ↗</a
+          ><a
+            class="optional"
+            href="https://github.com/charanvalavala/course-copilot"
+            target="_blank"
+            rel="noopener"
+            >Source ↗</a
+          ><button id="cancel" class="small">Cancel request</button>
+        </nav>
       </header>
-      <main class="demo-main">
-        <p class="eyebrow">Document retrieval · Browser sample</p>
-        <h1>Course Copilot</h1>
-        <p class="demo-intro">Ask a question and inspect the source note that supports it. This small sample shows evidence retrieval and citation behavior without a hosted model.</p>
-        <div class="notice"><span class="notice-mark" aria-hidden="true">i</span><span><strong>Static walkthrough.</strong> It searches three fixed notes in your browser using simple lexical matching. The full repository app uses hybrid dense and SQLite FTS5 retrieval, reciprocal-rank fusion, and an API; this page is not connected to that backend.</span></div>
-        <section class="demo-panel" aria-labelledby="panel-title">
-          <div class="panel-top"><h2 id="panel-title" class="panel-title">Search the sample notes</h2><span class="demo-label">3 SOURCE NOTES</span></div>
-          <form class="demo-form" id="search-form">
-            <label class="sr-only" for="question">Question</label>
-            <input class="demo-input" id="question" name="question" autocomplete="off" placeholder="Try: When does semester II classwork begin?" required>
-            <button class="demo-button" type="submit">Find evidence <span aria-hidden="true">↗</span></button>
-          </form>
-          <div class="suggestions" aria-label="Suggested questions">
-            <button class="suggestion" type="button" data-query="When does semester II classwork begin?">Semester II start date</button>
-            <button class="suggestion" type="button" data-query="What does course registration require?">Course permission</button>
-            <button class="suggestion" type="button" data-query="How many regular semesters are there?">Regular semesters</button>
+      <main id="main">
+        <div class="workspace">
+          <aside class="rail">
+            <div class="eyebrow">Document workspace</div>
+            <nav>
+              <button class="active" aria-pressed="true" data-panel="ask">
+                01 / Search</button
+              ><button aria-pressed="false" data-panel="sources">
+                02 / Sources</button
+              ><button aria-pressed="false" data-panel="eval">
+                03 / Evaluation
+              </button>
+            </nav>
+            <span id="health" class="badge">Connecting</span>
+            <div class="rail-note">
+              <p class="quiet">
+                MiniLM embeddings + BM25. Ranked excerpts stay visible even when
+                generation is unavailable.
+              </p>
+            </div>
+          </aside>
+          <div>
+            <div class="page-title">
+              <div>
+                <span class="eyebrow">Course Copilot</span>
+                <h1>Your documents.<br />The relevant passage.</h1>
+                <p>
+                  Ask a question, then inspect the source before using the
+                  answer.
+                </p>
+              </div>
+              <button id="saved" class="small">View saved example ↗</button>
+            </div>
+            <div id="mode" class="notice">
+              Live document search. The saved example works without the API.
+            </div>
+            <section data-view="ask">
+              <div class="panel">
+                <label for="question">Question</label
+                ><textarea
+                  id="question"
+                  placeholder="When does Semester II registration begin?"
+                ></textarea>
+                <div class="ask-actions">
+                  <span>Ctrl / ⌘ + Enter to search</span
+                  ><button id="ask" class="primary">Find evidence ↗</button>
+                </div>
+                <div class="samples">
+                  <button
+                    data-question="When does Semester II registration begin?"
+                  >
+                    Registration dates</button
+                  ><button
+                    data-question="Does a bulletin listing guarantee a course will be offered?"
+                  >
+                    Course availability</button
+                  ><button
+                    data-question="What is the weather forecast tomorrow?"
+                  >
+                    Try an unsupported question
+                  </button>
+                </div>
+              </div>
+              <div id="results" class="result" aria-live="polite">
+                <div class="empty">
+                  <div class="big">⌕</div>
+                  <h2>Start with a question.</h2>
+                  <p>The answer mode and source passages will appear here.</p>
+                </div>
+              </div>
+            </section>
+            <section data-view="sources" hidden>
+              <div class="panel">
+                <div class="panel-head">
+                  <h2>Source library</h2>
+                  <span id="doc-count" class="badge">Sources</span>
+                </div>
+                <div id="documents"></div>
+                <div id="upload-area">
+                  <label for="upload"
+                    >Add a PDF, TXT or Markdown file, up to 8 MB</label
+                  ><input
+                    class="file-input"
+                    id="upload"
+                    type="file"
+                    accept=".pdf,.txt,.md"
+                  /><button id="seed" class="small">Load sample sources</button>
+                </div>
+                <p class="mode-note">
+                  Text PDFs only. Use documents you have permission to process.
+                  Public demos disable uploads and deletion.
+                </p>
+              </div>
+            </section>
+            <section data-view="eval" hidden>
+              <div class="panel">
+                <div class="panel-head">
+                  <h2>Retrieval evaluation</h2>
+                  <button id="evaluate" class="primary">
+                    Run live evaluation
+                  </button>
+                </div>
+                <p class="quiet">
+                  The original set has 52 answerable questions and 15
+                  out-of-scope prompts. These scores measure source retrieval,
+                  not generated-answer correctness.
+                </p>
+                <div id="metrics"></div>
+                <details>
+                  <summary>Challenge benchmark &amp; methodology</summary>
+                  <div id="challenge"></div>
+                  <p class="quiet">
+                    The separate challenge uses fictional policy documents,
+                    passage-level labels, archived versions, ambiguity and
+                    out-of-scope prompts. It is manually authored, not an
+                    independent user study.
+                  </p>
+                </details>
+                <label for="eval-upload">Evaluate your own JSONL set</label
+                ><input id="eval-upload" type="file" accept=".jsonl" /><button
+                  id="custom-eval"
+                  class="small"
+                >
+                  Run uploaded set
+                </button>
+              </div>
+            </section>
           </div>
-          <div class="results-head"><h2 id="result-title">Evidence results</h2><span id="result-count">Choose a question to begin</span></div>
-          <div class="result-list" id="results" aria-live="polite"><div class="empty-state">Your results will show the matching note and its source link here.</div></div>
-          <div class="demo-footer"><a href="https://github.com/charanvalavala/course-copilot" target="_blank" rel="noopener noreferrer">Open the full project repository ↗</a><span>Sample academic sources are linked to official BITS Pilani documents.</span></div>
-        </section>
+        </div>
       </main>
+      <footer>
+        <span>Academic sample corpus · not an official BITS service</span
+        ><span
+          >Built by Charan Teja Valavala ·
+          <a href="https://github.com/charanvalavala/course-copilot"
+            >Code &amp; evaluation ↗</a
+          ></span
+        >
+      </footer>
     </div>
+    <button
+      id="feedback"
+      class="feedback"
+      role="status"
+      aria-live="polite"
+      hidden
+    ></button>
+    <script type="module" src="./app.js"></script>
   </body>
 </html>

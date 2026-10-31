@@ -1,44 +1,114 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="A browser-only sample walkthrough of IncidentPilot's approval-gated incident simulation.">
-    <title>IncidentPilot — Sample Walkthrough</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../demo.css">
-    <script src="app.js" defer></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#12171b" />
+    <title>IncidentPilot | Charan Teja Valavala</title>
+    <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body>
-    <div class="demo-wrap">
-      <header class="demo-header">
-        <a class="demo-brand" href="../../">Charan Teja Valavala</a>
-        <a class="demo-back" href="../../#work">← All projects</a>
+  <body data-saved="true" style="--accent: #f0a38c">
+    <div class="shell">
+      <header>
+        <a href="#main" class="brand"
+          ><span class="logo">IP</span>IncidentPilot</a
+        >
+        <nav>
+          <a class="optional" href="https://charanvalavala.github.io"
+            >Portfolio</a
+          ><a
+            href="https://charan-incidentpilot.onrender.com"
+            target="_blank"
+            rel="noopener"
+            >Live app ↗</a
+          ><a
+            class="optional"
+            href="https://github.com/charanvalavala/incidentpilot"
+            target="_blank"
+            rel="noopener"
+            >Source ↗</a
+          ><button id="cancel" class="small">Cancel request</button>
+        </nav>
       </header>
-      <main class="demo-main">
-        <p class="eyebrow">Incident workflows · Browser simulation</p>
-        <h1>IncidentPilot</h1>
-        <p class="demo-intro">Inspect seeded service signals, review a proposed response, and record an approval decision in this browser-only simulation.</p>
-        <div class="notice"><span class="notice-mark" aria-hidden="true">i</span><span><strong>Simulation only.</strong> The scenarios and diagnoses are fixed examples. This page does not connect to production systems, run an AI model, or execute an operational action. The repository app records state and traces in a local SQLite simulator.</span></div>
-        <section class="demo-panel" aria-labelledby="panel-title">
-          <div class="panel-top"><h2 id="panel-title" class="panel-title">Review an incident scenario</h2><span class="demo-label">SEEDED SCENARIOS</span></div>
-          <label class="sr-only" for="scenario">Choose a scenario</label>
-          <select class="demo-select" id="scenario">
-            <option value="latency">API latency after release</option>
-            <option value="pool">Payment database pool exhausted</option>
-          </select>
-          <p class="scenario-summary" id="scenario-summary"></p>
-          <div class="split">
-            <section class="data-block" aria-labelledby="signals-title"><h2 id="signals-title">Observed signals</h2><div id="signals"></div></section>
-            <section class="data-block" aria-labelledby="diagnosis-title"><h2 id="diagnosis-title">Scenario diagnosis</h2><p id="diagnosis"></p><div class="decision-row"><button class="demo-button" id="approve" type="button">Approve simulation</button><button class="demo-button secondary" id="reject" type="button">Reject</button></div><p id="decision" aria-live="polite"></p></section>
+      <main id="main">
+        <div class="page-title">
+          <div>
+            <span class="eyebrow">Incident investigation / simulator</span>
+            <h1>IncidentPilot</h1>
+            <p>
+              Inspect signals, review the diagnosis, and decide what happens
+              next.
+            </p>
           </div>
-          <div class="results-head"><h2>Local event trace</h2><span>THIS BROWSER SESSION</span></div>
-          <ol class="trace" id="trace" aria-live="polite"></ol>
-          <div class="demo-footer"><a href="https://github.com/charanvalavala/incidentpilot" target="_blank" rel="noopener noreferrer">Open the full project repository ↗</a><span>Approval records only a local demo decision.</span></div>
-        </section>
+          <button id="saved" class="small">View saved investigation ↗</button>
+        </div>
+        <div id="mode" class="notice">
+          <strong>Simulation only.</strong> Tools read bundled data. Approval
+          records a decision; it never changes a production system.
+        </div>
+        <div class="workspace">
+          <aside class="rail">
+            <span class="eyebrow">Choose an incident</span>
+            <div id="scenarios" class="scenario-list"></div>
+            <div class="rail-note">
+              <p class="quiet">
+                The inference mode is shown on every diagnosis. Unsupported or
+                conflicting diagnoses escalate to human review.
+              </p>
+            </div>
+          </aside>
+          <section>
+            <div class="panel-head">
+              <h2>Investigation</h2>
+              <span id="status" class="badge">Waiting</span>
+            </div>
+            <div id="investigation" aria-live="polite">
+              <div class="panel empty">
+                <div class="big">⌁</div>
+                <h2>Select a scenario.</h2>
+                <p>
+                  Evidence, reasoning mode, and the decision gate will appear
+                  here.
+                </p>
+              </div>
+            </div>
+            <div class="panel">
+              <div class="panel-head">
+                <h3>Policy checks</h3>
+                <button id="evaluate" class="small">Run checks ↗</button>
+              </div>
+              <p class="quiet">
+                Checks tool boundaries and approval requirements. This does not
+                measure model diagnosis accuracy.
+              </p>
+              <div id="eval-result"></div>
+              <details>
+                <summary>Measured local model benchmark</summary>
+                <pre id="benchmark">
+Load a saved investigation to see the recorded benchmark.</pre
+                >
+              </details>
+            </div>
+          </section>
+        </div>
       </main>
+      <footer>
+        <span>Synthetic incidents · no production access</span
+        ><span
+          >Built by Charan Teja Valavala ·
+          <a href="https://github.com/charanvalavala/incidentpilot"
+            >Code &amp; evaluation ↗</a
+          ></span
+        >
+      </footer>
     </div>
+    <button
+      id="feedback"
+      class="feedback"
+      role="status"
+      aria-live="polite"
+      hidden
+    ></button>
+    <script type="module" src="./app.js"></script>
   </body>
 </html>
