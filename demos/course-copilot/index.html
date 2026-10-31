@@ -17,7 +17,7 @@
           <a class="optional" href="https://charanvalavala.github.io"
             >Portfolio</a
           ><a
-            href="https://charan-course-copilot.onrender.com"
+            href="https://charan-course-copilot.onrender.com/?v=20261031"
             target="_blank"
             rel="noopener"
             >Live app ↗</a
@@ -132,10 +132,25 @@
                     Run live evaluation
                   </button>
                 </div>
+                <h3>Public SciFact benchmark</h3>
+                <p>
+                  Hybrid Hit@5: <strong>78.7%</strong> · Lexical: 76.0% · Dense:
+                  69.7%
+                </p>
                 <p class="quiet">
-                  The original set has 52 answerable questions and 15
-                  out-of-scope prompts. These scores measure source retrieval,
-                  not generated-answer correctness.
+                  300 published test queries over 5,183 abstracts, using fixed
+                  existing settings. Document relevance, not answer correctness.
+                  Offline benchmark; this button runs the smaller application
+                  check below.
+                </p>
+                <a
+                  href="https://github.com/charanvalavala/course-copilot/blob/main/reports/public-scifact.json"
+                  >Full public benchmark report ↗</a
+                >
+                <p class="quiet">
+                  The original application set has 52 answerable questions and
+                  15 out-of-scope prompts. These scores measure source
+                  retrieval, not generated-answer correctness.
                 </p>
                 <div id="metrics"></div>
                 <details>

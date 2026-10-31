@@ -44,6 +44,9 @@ async function loadSaved() {
     ? "Reload saved example"
     : "Return to live mode";
   $("upload-area").hidden = true;
+  $("eval-upload").disabled = true;
+  $("custom-eval").disabled = true;
+  $("evaluate").textContent = "Show saved application scores";
   $("documents").innerHTML = data.documents
     .map(
       (doc) =>
@@ -72,6 +75,9 @@ async function initialize() {
     });
     lastConnected = Date.now();
     $("health").textContent = "API online";
+    $("eval-upload").disabled = false;
+    $("custom-eval").disabled = false;
+    $("evaluate").textContent = "Run live application check";
     $("mode").textContent = config.read_only
       ? "Live API · sample sources preloaded · uploads disabled"
       : "Live API · add authorized documents in the source library";

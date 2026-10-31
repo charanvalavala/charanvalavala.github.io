@@ -4,7 +4,7 @@ Static portfolio deployed through GitHub Pages. No build step is required. Serve
 
 ## Content and interaction
 
-The project switcher uses actual screenshots captured from the applications, not concept illustrations. Each project has concise context and expandable build notes with architecture, measurements, decisions and limitations. The hero introduces Charan directly. MDDTI SBC and the concept-stage DataForge venture retain their verified scope. CGPA is not published.
+The project switcher uses actual screenshots captured from the applications, not concept illustrations. Each project has concise context and expandable build notes with architecture, measurements, decisions and limitations. The hero introduces Charan directly. MDDTI SBC and the concept-stage DataForge venture retain their verified scope.
 
 `demos/course-copilot`, `demos/formscope`, and `demos/incidentpilot` mirror each product's static interface and recorded `sample.json` outputs. The body sets `data-saved=true`: no backend is needed. These are saved walkthroughs, clearly labeled and linked separately from live apps. Course Copilot includes three recorded query results; IncidentPilot includes four recorded investigations; FormScope includes a dated SEC financial snapshot and saved semantic result. Arbitrary new inputs require the live service.
 
@@ -14,6 +14,6 @@ The project switcher uses actual screenshots captured from the applications, not
 
 Responsive layout, keyboard-operable preview buttons, visible focus, native details disclosures, descriptive image text, and reduced-motion styles. Content remains visible without JavaScript; no reveal effect hides it permanently. Fonts have local fallbacks. Frontend source is formatted and unbundled.
 
-Metrics come from checked-in reports in the project repositories. The 48-query Course Copilot challenge is fictional and manually authored; the FormScope search set is small and selected from lexical excerpts; IncidentPilot's training and stress cases are synthetic. None establish general production accuracy.
+Metrics come from checked-in reports in the project repositories. Course Copilot includes the public 300-query BEIR SciFact test over 5,183 abstracts and separate manually authored handbook checks. FormScope compares its updated API with pinned facts from 20 filings; its semantic search benchmark is small and selected from lexical excerpts. IncidentPilot's training and stress cases are synthetic. None establish general production accuracy.
 
 The resume at `resume.pdf` remains separately available. Repository pushes trigger the existing GitHub Pages deployment.
