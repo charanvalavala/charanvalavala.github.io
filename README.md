@@ -33,7 +33,7 @@ Motion uses CSS and the Web Animations API. The implementation checks the visito
 - FormScope: the updated deployed API matched 40 pinned revenue/net-income values from 20 filings. This is a fixed-reference comparison, not a fresh source-filing audit. Its separate semantic-search set contains selected cropped excerpts and has selection bias.
 - IncidentPilot: classifier 8/8 and local Qwen scoring 4/8 on eight synthetic stress cases, with twenty separate synthetic training cases and four known cause classes. Neither score establishes real-world operational reliability.
 
-Reports and reproduction steps live in the project repositories. The site preserves the internship's verified scope and describes DataForge as a concept-stage venture. The two earlier coursework projects remain available in the background section. The resume stays at `resume.pdf`.
+Reports and reproduction steps live in the project repositories. The site preserves the internship's verified scope and describes DataForge as a concept-stage venture. The two earlier coursework projects remain available in the background section. The updated resume is available at `Charan_Teja_Valavala_Resume.pdf`; `resume.pdf` is kept as an identical alias for existing links. The B.E. entry states current enrollment without a graduation year.
 
 ## Verification and publishing
 

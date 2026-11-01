@@ -458,7 +458,7 @@ const commands = [
   {
     label: "Resume PDF",
     detail: "Open resume",
-    href: "resume.pdf",
+    href: "Charan_Teja_Valavala_Resume.pdf",
     external: true,
   },
   { label: "Contact", detail: "Say hello", href: "#contact" },
