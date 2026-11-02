@@ -19,4 +19,4 @@ Each showcase links to its code, demo, measurements and limitations. The first t
 
 Keep HTML summaries and project data consistent when updating results. Push `main` to publish through GitHub Pages.
 
-The global resume is `Charan_Teja_Valavala_Resume.pdf`; `resume.pdf` remains an identical alias. It includes InspectLab and both college projects, with no CGPA or graduation year.
+The global resume is `Charan_Teja_Valavala_Resume.pdf`; `resume.pdf` remains an identical alias.
