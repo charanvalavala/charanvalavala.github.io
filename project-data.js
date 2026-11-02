@@ -159,4 +159,61 @@ const projects = [
       ],
     ],
   },
+{
+  "id": "inspectlab",
+  "name": "InspectLab",
+  "number": "04",
+  "category": "Computer vision & transformers",
+  "color": "#eab58e",
+  "short": "Compare normal. Find unusual.",
+  "description": "Few-reference visual defect detection with a frozen vision transformer, patch heatmaps and nearest-normal comparisons.",
+  "stack": [
+    "Python",
+    "DINOv2",
+    "ONNX",
+    "WebAssembly"
+  ],
+  "metric": "0.988",
+  "suffix": "",
+  "decimals": 3,
+  "metricLabel": "Mean image AUROC · 16 references",
+  "scope": "349 test images, three categories and three seeds. RGB baseline: 0.841. AUROC measures ranking, not threshold accuracy.",
+  "caption": "Actual browser inference",
+  "live": "https://charanvalavala.github.io/demos/inspectlab/",
+  "decision": "Keep the pretrained encoder frozen and compare local patches with normal examples. Hold out normal training images for threshold calibration instead of tuning on defects in the test set.",
+  "limit": "Three selected MVTec categories, not the full benchmark. The demo's zipper threshold misses 10/119 defects and flags 6/32 normal images. Blur and compression cause many false alarms; the heatmap is a feature-distance map, not a causal explanation.",
+  "result": "At 16 references, transformer features reached mean image AUROC 0.988 ± 0.002 versus 0.841 ± 0.017 for RGB patches. Pixel AUROC was 0.945 at 56 × 56. Category averages are weighted equally across three seeds.",
+  "secondary": "The same 25 MB INT8 ONNX encoder is used in 27 transformer benchmark runs and in the browser; 27 separate runs measure the RGB baseline. Nine additional corruption checks use a fixed clean-image threshold. Model weights are pretrained, not newly trained here.",
+  "bars": [
+    [
+      "RGB patches",
+      84.1
+    ],
+    [
+      "DINOv2 patches",
+      98.8
+    ]
+  ],
+  "barScope": "Mean image AUROC, three categories and three seeds, 16 references per category.",
+  "steps": [
+    [
+      "01",
+      "Reference",
+      "Normal images → patch bank",
+      "Select 1, 4 or 16 normal examples. Keep a separate normal subset for calibration; never draw references from test images."
+    ],
+    [
+      "02",
+      "Compare",
+      "Frozen ViT → cosine distance",
+      "Resize to 224 × 224, extract 256 patch vectors, and find each patch's nearest normal match using the quantized encoder."
+    ],
+    [
+      "03",
+      "Inspect",
+      "Heatmap + calibrated threshold",
+      "Display unusual regions and the matching normal patch. Report the distance score beside its threshold, with measured failure cases."
+    ]
+  ]
+},
 ];

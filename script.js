@@ -26,7 +26,7 @@ function selectPreview(index) {
   image.alt = `${project.name} actual application interface`;
   $("#hero-project-title").textContent = project.name;
   $("#hero-project-type").textContent = project.category;
-  $("#hero-project-number").textContent = `${project.number} / 03`;
+  $("#hero-project-number").textContent = `${project.number} / ${String(projects.length).padStart(2, "0")}`;
   $("#hero-project-link").href = `#${project.id}`;
   previewButtons.forEach((button, position) =>
     button.setAttribute("aria-pressed", String(position === previewIndex)),
@@ -340,13 +340,13 @@ function openProject(identifier) {
   const chart = project.bars
     .map(
       ([label, value]) =>
-        `<div class="chart-row"><span>${escapeHTML(label)}</span><div class="chart-track"><i style="--bar:${Number(value)}%"></i></div><strong>${Number(value).toFixed(1)}%</strong></div>`,
+        `<div class="chart-row"><span>${escapeHTML(label)}</span><div class="chart-track"><i style="--bar:${Number(value)}%"></i></div><strong>${project.id === "inspectlab" ? (Number(value) / 100).toFixed(3) : Number(value).toFixed(1) + "%"}</strong></div>`,
     )
     .join("");
   $("#dialog-category").textContent = `${project.number} / ${project.category}`;
   projectDialog.style.setProperty("--project", project.color);
   $("#dialog-content").innerHTML =
-    `<div class="dialog-inner"><h2 id="dialog-title">${escapeHTML(project.name)}</h2><p class="dialog-intro">${escapeHTML(project.short)}</p><div class="dialog-columns"><div><h3>Why this approach</h3><p>${escapeHTML(project.decision)}</p><h3>What I measured</h3><p>${escapeHTML(project.result)}</p><p>${escapeHTML(project.secondary)}</p></div><div><h3>The comparison</h3><div class="result-chart">${chart}</div><p class="chart-scope">${escapeHTML(project.barScope)}</p><h3>The path through the system</h3><p>${project.steps.map((step) => escapeHTML(step[1])).join(" → ")}</p><a class="text-action" href="https://github.com/charanvalavala/${project.id}#readme" target="_blank" rel="noopener">Full methodology & reports ↗</a></div></div><div class="dialog-limit"><h3>Known limits</h3><p>${escapeHTML(project.limit)}</p></div><div class="dialog-actions"><a class="button button-blue" href="demos/${project.id}/">Open saved demo ${arrow}</a><a href="${project.live}" target="_blank" rel="noopener">Live app ↗</a><a href="https://github.com/charanvalavala/${project.id}" target="_blank" rel="noopener">Source code ↗</a></div></div>`;
+    `<div class="dialog-inner"><h2 id="dialog-title">${escapeHTML(project.name)}</h2><p class="dialog-intro">${escapeHTML(project.short)}</p><div class="dialog-columns"><div><h3>Why this approach</h3><p>${escapeHTML(project.decision)}</p><h3>What I measured</h3><p>${escapeHTML(project.result)}</p><p>${escapeHTML(project.secondary)}</p></div><div><h3>The comparison</h3><div class="result-chart">${chart}</div><p class="chart-scope">${escapeHTML(project.barScope)}</p><h3>The path through the system</h3><p>${project.steps.map((step) => escapeHTML(step[1])).join(" → ")}</p><a class="text-action" href="https://github.com/charanvalavala/${project.id}#readme" target="_blank" rel="noopener">Full methodology & reports ↗</a></div></div><div class="dialog-limit"><h3>Known limits</h3><p>${escapeHTML(project.limit)}</p></div><div class="dialog-actions"><a class="button button-blue" href="demos/${project.id}/">${project.id === "inspectlab" ? "Open browser app" : "Open saved demo"} ${arrow}</a><a href="${project.live}" target="_blank" rel="noopener">Live app ↗</a><a href="https://github.com/charanvalavala/${project.id}" target="_blank" rel="noopener">Source code ↗</a></div></div>`;
   projectDialog.showModal();
   projectDialog.scrollTop = 0;
   lockPage();

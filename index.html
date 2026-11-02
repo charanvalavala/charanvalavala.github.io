@@ -31,9 +31,9 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@1&family=Syne:wght@600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=20261101-r2" />
-    <script src="project-data.js?v=20261101-r2" defer></script>
-    <script src="script.js?v=20261101-r3" defer></script>
+    <link rel="stylesheet" href="styles.css?v=20261102-inspectlab" />
+    <script src="project-data.js?v=20261102-inspectlab" defer></script>
+    <script src="script.js?v=20261102-inspectlab" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -61,7 +61,7 @@
       >
       <nav class="desktop-nav" aria-label="Main navigation">
         <span class="nav-indicator" aria-hidden="true"></span
-        ><a href="#work" data-nav="work">Work <sup>03</sup></a
+        ><a href="#work" data-nav="work">Work <sup>04</sup></a
         ><a href="#lab" data-nav="lab">Under the hood</a
         ><a href="#about" data-nav="about">About</a
         ><a href="#contact" data-nav="contact">Contact</a>
@@ -108,8 +108,7 @@
               >
             </h1>
             <p class="hero-description">
-              I build document search, financial tools, and ML workflows. Here’s
-              what I’ve been working on.
+              I build search tools, financial software, and visual inspection experiments. Here’s what I’ve been working on.
             </p>
             <div class="hero-actions">
               <a href="#work" class="button button-blue" data-magnetic
@@ -130,7 +129,7 @@
             </div>
             <div class="hero-note">
               <span class="note-line"></span
-              ><span>Three projects.<br />All with code and demos.</span>
+              ><span>Four projects.<br />All with code and demos.</span>
             </div>
           </div>
           <div class="hero-stage" aria-label="Interactive project previews">
@@ -141,7 +140,7 @@
             <div class="stage-cross stage-cross-one" aria-hidden="true">+</div>
             <div class="stage-cross stage-cross-two" aria-hidden="true">+</div>
             <div class="stage-coordinate label" aria-hidden="true">
-              SELECTED WORK / 01—03
+              SELECTED WORK / 01—04
             </div>
             <div class="browser-deck" data-tilt>
               <div class="deck-ghost ghost-back" aria-hidden="true">
@@ -173,7 +172,7 @@
                 />
                 <div class="deck-caption">
                   <span id="hero-project-type">DOCUMENT RETRIEVAL</span
-                  ><span id="hero-project-number">01 / 03</span>
+                  ><span id="hero-project-number">01 / 04</span>
                 </div></a
               >
             </div>
@@ -202,7 +201,7 @@
                   aria-label="Preview IncidentPilot"
                 >
                   03
-                </button>
+                </button><button data-preview="3" aria-pressed="false" aria-label="Preview InspectLab">04</button>
               </div>
               <button class="deck-next" aria-label="Preview next project">
                 <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -249,7 +248,7 @@
             <h2 id="work-title">A few things<br /><em>I’ve built.</em></h2>
           </div>
           <p class="section-aside">
-            Three projects, different problems.<br />Open the demo or go
+            Four projects, different problems.<br />Open the demo or go
             straight to the code.
           </p>
         </div>
@@ -576,10 +575,110 @@
               </div>
             </div>
           </article>
+          <article
+            class="work-card"
+            id="inspectlab"
+            data-project="inspectlab"
+            style="--project: #eab58e"
+          >
+            <div class="card-top">
+              <span class="label">04 / Computer vision &amp; transformers</span
+              ><span class="card-index" aria-hidden="true">04</span>
+            </div>
+            <div class="card-body">
+              <div class="card-copy">
+                <h3>InspectLab</h3>
+                <p class="card-description">
+                  Compare product images with normal references, inspect defect heatmaps, and test how vision-transformer features handle unusual patches.
+                </p>
+                <div class="tags"><span>Python</span><span>DINOv2</span><span>ONNX</span><span>WebAssembly</span></div>
+                <div class="project-result">
+                  <strong
+                    ><span data-count="0.988" data-decimals="3">0.988</span
+                    ><span class="metric-suffix"> AUROC</span></strong
+                  ><span>Mean image AUROC · 16 references</span>
+                </div>
+                <p class="metric-scope">
+                  349 test images · three MVTec categories · three seeds. RGB baseline: 0.841. Ranking performance, not inspection accuracy.
+                </p>
+                <div class="project-actions">
+                  <a
+                    class="button button-project"
+                    href="demos/inspectlab/"
+                    data-magnetic
+                    >Explore demo
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path
+                        d="M5 19 19 5M5 5h14v14"
+                        stroke="currentColor"
+                        stroke-width="1.6"
+                      /></svg></a
+                  ><a
+                    class="text-action"
+                    data-details="inspectlab"
+                    href="https://github.com/charanvalavala/inspectlab#readme"
+                    >Build notes <span>+</span></a
+                  >
+                </div>
+              </div>
+              <div class="project-art" data-tilt>
+                <div class="art-grid" aria-hidden="true"></div>
+                <div class="art-symbol" aria-hidden="true">
+                  <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                    <path
+                      d="M8 11h17l7 9-7 9H8l7-9-7-9Z"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="m18 11 7 9-7 9"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+                <a
+                  class="product-window"
+                  href="demos/inspectlab/"
+                  data-cursor="Open demo"
+                  ><div class="window-chrome">
+                    <span class="window-dots" aria-hidden="true"
+                      ><i></i><i></i><i></i></span
+                    ><span>InspectLab</span><span>↗</span>
+                  </div>
+                  <img
+                    src="assets/inspectlab.jpg"
+                    alt="InspectLab defect heatmap and normal-reference comparison"
+                    loading="lazy"
+                    width="1507"
+                    height="770"
+                /></a>
+                <div class="art-caption">
+                  <span><i></i> Browser inference · new uploads supported</span
+                  ><span>↗</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <span>Upload an image. Inspect the result. Check the benchmark.</span>
+              <div>
+                <a
+                  href="https://charanvalavala.github.io/demos/inspectlab/"
+                  target="_blank"
+                  rel="noopener"
+                  >Live app ↗</a
+                ><a
+                  href="https://github.com/charanvalavala/inspectlab"
+                  target="_blank"
+                  rel="noopener"
+                  >GitHub ↗</a
+                >
+              </div>
+            </div>
+          </article>
         </div>
         <p class="hosting-note">
-          Saved demos load immediately. Live apps run on free Render instances
-          and may take time to wake. New queries require the live app.
+          The first three demos show recorded outputs; their live apps may take time to wake. InspectLab runs new images in your browser after downloading its model.
         </p>
       </section>
       <section class="lab-section" id="lab" aria-labelledby="lab-title">
@@ -601,7 +700,7 @@
           >
             <button data-lab="0" aria-pressed="true">Course Copilot</button
             ><button data-lab="1" aria-pressed="false">FormScope</button
-            ><button data-lab="2" aria-pressed="false">IncidentPilot</button>
+            ><button data-lab="2" aria-pressed="false">IncidentPilot</button><button data-lab="3" aria-pressed="false">InspectLab</button>
           </div>
           <div class="lab-workspace">
             <div class="pipeline">
@@ -647,8 +746,7 @@
             <p>
               I’m a Computer Science student at
               <strong>BITS Pilani, Hyderabad.</strong> I’m interested in the
-              parts of AI that have to work as software: retrieval, data
-              pipelines, evaluation, and the interface someone actually uses.
+              parts of AI that have to work as software: image models, retrieval, data pipelines, evaluation, and the interface someone actually uses.
             </p>
             <a
               class="text-action"
@@ -705,7 +803,7 @@
             <div>
               <dt>Data & ML</dt>
               <dd>
-                NumPy, Pandas, Matplotlib, scikit-learn, OpenCV, Sentence
+                NumPy, Pandas, Matplotlib, scikit-learn, OpenCV, PyTorch, DINOv2, Sentence
                 Transformers, ONNX
               </dd>
             </div>
