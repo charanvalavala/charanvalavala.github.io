@@ -15,7 +15,7 @@ Each showcase links to its code, demo, measurements and limitations. The first t
 
 ## Structure
 
-`index.html` contains the visible summaries. `project-data.js` supplies project details and architecture steps. `script.js` handles previews, dialogs, navigation and pointer/scroll interactions; `styles.css` contains the responsive layout and motion preferences. `assets/` holds the mark and application screenshots. `demos/` contains the project interfaces.
+`index.html` contains the visible summaries. `project-data.js` supplies project details and architecture steps. `script.js` handles previews, dialogs, navigation and heatmap comparison, project selection and scroll reveals; `styles.css` contains the responsive layout and motion preferences. `assets/` holds the mark, application screenshots and recorded inspection preview. The heatmap preview uses distances from the shipped INT8 encoder; it does not load model weights on the homepage. `demos/` contains the project interfaces.
 
 Keep HTML summaries and project data consistent when updating results. Push `main` to publish through GitHub Pages.
 
