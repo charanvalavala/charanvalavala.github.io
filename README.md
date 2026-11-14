@@ -1,22 +1,11 @@
 # Charan Teja Valavala
 
-Personal portfolio: https://charanvalavala.github.io/
+[Portfolio](https://charanvalavala.github.io/) · [Resume](https://charanvalavala.github.io/Charan_Teja_Valavala_Resume.pdf)
 
-Static HTML, CSS and JavaScript. Run locally with `python -m http.server 8765` and open http://127.0.0.1:8765.
+A project collection built with HTML, CSS and JavaScript. Open a project for a short explanation, demo, code and expandable results. Light and dark themes are saved locally.
 
-## Projects
+Run `python -m http.server 8781` and open http://127.0.0.1:8781.
 
-- **Course Copilot:** hybrid retrieval; 78.7% Hit@5 on 300 public SciFact queries across 5,183 abstracts.
-- **FormScope:** source-linked SEC financials and filing search; 40 pinned financial values matched across 20 filings.
-- **IncidentPilot:** evidence-linked incident classification and approval-gated simulation; separate synthetic model and guardrail evaluations.
-- **InspectLab:** visual defect detection; mean image AUROC 0.988 versus 0.841 RGB baseline over three MVTec categories and three seeds. New-image inference runs in the browser.
+`project-data.js` holds detailed results and limitations. `demos/` contains the walkthroughs and InspectLab browser inference. Dataset and model terms remain in `demos/inspectlab/NOTICES.md`.
 
-Each showcase links to its code, demo, measurements and limitations. The first three demos contain recorded outputs and link to separate live services. InspectLab downloads its encoder and normal references, then processes images locally. Its data and model terms are in `demos/inspectlab/NOTICES.md`.
-
-## Structure
-
-`index.html` contains the visible summaries. `project-data.js` supplies project details and architecture steps. `script.js` handles previews, dialogs, navigation and heatmap comparison, project selection and scroll reveals; `styles.css` contains the responsive layout and motion preferences. `assets/` holds the mark, application screenshots and recorded inspection preview. The heatmap preview uses distances from the shipped INT8 encoder; it does not load model weights on the homepage. `demos/` contains the project interfaces.
-
-Keep HTML summaries and project data consistent when updating results. Push `main` to publish through GitHub Pages.
-
-The global resume is `Charan_Teja_Valavala_Resume.pdf`; `resume.pdf` remains an identical alias.
+Push `main` to publish with GitHub Pages. Both resume PDF names serve the same global resume.
